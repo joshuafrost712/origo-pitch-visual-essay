@@ -1,11 +1,432 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "sections": [
     {
       "id": "hero",
       "children": [
-        { "id": "hero-title", "heading": "Origo" },
-        { "id": "hero-tagline", "text": "Back to the sources." }
+        {
+          "id": "hero-title",
+          "heading": "Origo"
+        },
+        {
+          "id": "hero-kicker",
+          "kicker": "Back to the sources"
+        },
+        {
+          "id": "hero-tagline",
+          "text": "A database of the ancient world's literature, and a research app built on it, so that anyone translating the Bible can study a passage as if they were an attentive member of the original audience."
+        },
+        {
+          "id": "hero-scroll",
+          "label": "Scroll"
+        }
+      ]
+    },
+    {
+      "id": "bracelet",
+      "children": [
+        {
+          "id": "bracelet-kicker",
+          "kicker": "Why this exists"
+        },
+        {
+          "id": "bracelet-heading",
+          "heading": "Every morning, a bracelet"
+        },
+        {
+          "id": "bracelet-p1",
+          "text": "Every morning I put on a bracelet of black, orange, and red beads. It was made in Brazil by Indigenous translators working on an oral Bible translation with a mission project there. It is my reminder to pray for them."
+        },
+        {
+          "id": "bracelet-p2",
+          "text": "They speak high-school to college-level Portuguese. For study resources they have a few translation helps in Portuguese, and for everything else, they ask ChatGPT."
+        },
+        {
+          "id": "bracelet-p3",
+          "text": "I have spent fifteen years studying the Bible with the best desktop software available, and about ten of those studying the original languages with it. Since 2020 I have worked as an exegete, researcher, and team leader for the Spoken English Bible, an oral translation. Since 2023 I have been pioneering methods for studying emotions in Scripture to guide oral translators, and I published my thesis on that work in 2025."
+        },
+        {
+          "id": "bracelet-p4",
+          "text": "The bracelet asks me a question I have never been able to shake: my brothers and sisters translating the Bible around the world deserve better than a chatbot's guesses. What would it take to put world-class exegetical evidence in their hands, in a language they read well, presented the way they communicate?"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "children": [
+        {
+          "id": "gap-kicker",
+          "kicker": "The problem"
+        },
+        {
+          "id": "gap-heading",
+          "heading": "You already know the tools fall short"
+        },
+        {
+          "id": "gap-p1",
+          "text": "If you work anywhere near Bible translation, you have felt it. The concise resources translation teams rely on answer roughly 60% of the questions a real team asks. The other 40% gets filled by the translator's own assumptions, because there was nothing else within reach to consult."
+        },
+        {
+          "id": "gap-p2",
+          "text": "The knowledge to answer those questions exists. But assembling it takes a specialist months, working in English, behind expensive licenses. I began my career in SIL doing exactly this kind of research, so I know what it costs. Some of that research changed how key passages were translated. More of it is still sitting in folders, unfinished, because the hours ran out."
+        },
+        {
+          "id": "gap-p3",
+          "text": "Recent AI breakthroughs clearly ought to help. The open question is what, specifically, they should be aimed at. What follows is my answer, told through three real research problems."
+        }
+      ]
+    },
+    {
+      "id": "journey1",
+      "children": [
+        {
+          "id": "j1-kicker",
+          "kicker": "Journey one"
+        },
+        {
+          "id": "j1-heading",
+          "heading": "A word that decides a translation"
+        },
+        {
+          "id": "j1-problem",
+          "text": "An oral translation team is deciding how to render μαρτυρέω, the word English Bibles translate as \"testify\" or \"bear witness.\" Get it wrong and every courtroom scene, every apostolic claim, every \"testimony\" in the New Testament drifts with it."
+        },
+        {
+          "id": "j1-question",
+          "quote": "What does μαρτυρέω actually do across its New Testament occurrences, and how does its sense shift with speaker, setting, and audience?"
+        },
+        {
+          "id": "j1-demo-lead",
+          "text": "In Origo, that study starts with one search. Type the lemma and the engine finds every inflected form, in every text, with the English gloss beside each hit. Try it below: this is a working recreation of the real search screen, running on frozen output from the live engine."
+        },
+        {
+          "id": "j1-demo-caption",
+          "caption": "Interactive: a lemma search, exactly as the app renders it. Click a result to open the aligned reader."
+        },
+        {
+          "id": "j1-reader-caption",
+          "caption": "The real reader: original text and English side by side, with the search hits flashed. This screenshot, like every screenshot in this essay, is the actual app as it runs today."
+        },
+        {
+          "id": "j1-payoff",
+          "text": "I ran this study for real, for the Spoken English Bible's key-terms work. From question to evidence to write-up took about an hour. Done by hand, the same study takes me 5 to 20 hours, and this one's conclusions changed a real translation decision. That is the promise in miniature: not different answers, but the same careful answers at a speed a translation schedule can afford."
+        }
+      ]
+    },
+    {
+      "id": "journey2",
+      "children": [
+        {
+          "id": "j2-kicker",
+          "kicker": "Journey two"
+        },
+        {
+          "id": "j2-heading",
+          "heading": "A question no concordance can ask"
+        },
+        {
+          "id": "j2-problem",
+          "text": "Now a harder one. Speech in Scripture is soaked in emotion, and emotion changes what words do. A translator working through a confrontation scene wants to know how people in the ancient world actually talked when they were frustrated, and whether a key word behaves differently in that kind of speech."
+        },
+        {
+          "id": "j2-question",
+          "quote": "Where does this word's root appear in dialogue, while the speaker is frustrated, talking about this topic, anywhere in the ancient world?"
+        },
+        {
+          "id": "j2-p1",
+          "text": "No concordance can ask that. Origo can, because every text in the database carries 100 to 300 lines of metadata: era, language, people, places, the speech acts in the text, and the emotional and social dynamics of every conversation, including who holds power, how close the parties are, and what is at stake. Across the corpus that adds up to a social map of 33,000 tagged participants in 23,000 interactions."
+        },
+        {
+          "id": "j2-caption",
+          "caption": "The AI refiner on the real search page: describe what you want in plain language, choose traditions and period, and a local model fills in the precise filters. Every facet, including themes, entities, and the social-world layer, is also available by hand in the rail."
+        },
+        {
+          "id": "j2-payoff",
+          "text": "Specificity like this, across a corpus this wide, is the difference between a research season and an afternoon. The data collection and organization that used to take months of a specialist's time now takes hours, and the specialist's judgment gets spent where it belongs: on what the evidence means."
+        }
+      ]
+    },
+    {
+      "id": "journey3",
+      "children": [
+        {
+          "id": "j3-kicker",
+          "kicker": "Journey three"
+        },
+        {
+          "id": "j3-heading",
+          "heading": "Hearing what the text does"
+        },
+        {
+          "id": "j3-problem",
+          "text": "Oral translation lives or dies by sound. The biblical authors knew that too: they wrote with puns, rhymes, and runs of words that begin alike, artistry that carried meaning for listening audiences. But a translator cannot carry over what the resources never showed them."
+        },
+        {
+          "id": "j3-question",
+          "quote": "Where exactly in this passage is the artistry, and how confident can we be that it is craft rather than chance?"
+        },
+        {
+          "id": "j3-p1",
+          "text": "Origo's Artistry suite answers with evidence, not impressions. The Structure viewer scores parallelism and chiasm across five axes and names the rhetorical figure; the Soundscape viewer detects sound play in the Greek and grades every find against a 4.5-million-word background of ordinary contemporaneous Koine, so a pattern only counts when chance cannot explain it. On its benchmark passage in Matthew 6, the sound-play detector recovered every device biblical scholars had already catalogued by hand."
+        },
+        {
+          "id": "j3-structure-caption",
+          "caption": "The Structure viewer on Mark 1: an epistrophe scored at 10σ, rarer than 1 in 100,000 against the Greek New Testament itself."
+        },
+        {
+          "id": "j3-structure-caption-aligned",
+          "caption": "The Aligned view on the Beatitudes: an eight-member series at high confidence, its figures named, checked against published scholarship, and judged \"deliberate artistry, strongly supported.\""
+        },
+        {
+          "id": "j3-demo-lead",
+          "text": "Here is the Soundscape viewer's own output on the Lord's Prayer, as an interactive miniature. Tap a finding to light up the words that carry it."
+        },
+        {
+          "id": "j3-demo-caption",
+          "caption": "Interactive: real detector output for Matthew 6:9-13, with the app's own class colors. ὀφειλήματα / ὀφειλέταις is the pair English keeps as \"debts / debtors.\""
+        },
+        {
+          "id": "j3-payoff",
+          "text": "An oral translator who can see the craft can decide what to do with it: echo the rhyme, keep the pun, restructure the parallelism in their language's own idiom. None of that is possible while the artistry stays invisible."
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "children": [
+        {
+          "id": "engine-kicker",
+          "kicker": "The database"
+        },
+        {
+          "id": "engine-heading",
+          "heading": "The engine underneath"
+        },
+        {
+          "id": "engine-p1",
+          "text": "Everything you just saw runs on one foundation: a corpus of the ancient world's literature relevant to the Bible, gathered from openly licensed sources and license-tracked file by file. Hebrew Bible, Greek New Testament, Septuagint, Dead Sea Scrolls, the Jewish literature, the Greco-Roman authors, the ancient Near Eastern texts, ancient translations, and tens of thousands of everyday papyri and inscriptions, the closest thing we have to hearing ordinary people talk."
+        },
+        {
+          "id": "engine-stat-files",
+          "label": "indexed files",
+          "note": "77674"
+        },
+        {
+          "id": "engine-stat-collections",
+          "label": "collections",
+          "note": "112"
+        },
+        {
+          "id": "engine-stat-works",
+          "label": "distinct works",
+          "note": "45737"
+        },
+        {
+          "id": "engine-stat-tokens",
+          "label": "tokens of non-biblical Greek, lemma-searchable",
+          "note": "12160000"
+        },
+        {
+          "id": "engine-stat-links",
+          "label": "typed links between texts",
+          "note": "69355"
+        },
+        {
+          "id": "engine-p2",
+          "text": "Each text moves through one pipeline: an interlinear with morphology and roots identified, a literal English translation aligned to the scholarly divisions, 100 to 300 lines of metadata, and a vector index for semantic search. The result is a corpus that people and AI agents can query with the same precision, and every answer traces back to a source line."
+        },
+        {
+          "id": "engine-p3",
+          "text": "Around the database sits the research app: a tiled workspace where search, reading, artistry tools, reports, and notes live side by side. Notes are plain markdown files you keep and can open in any editor. AI is optional throughout, and it runs through whatever you choose, from free local models on your own machine to the lightest cloud tiers. Your own legally owned PDFs, commentaries, and articles can sit beside the corpus and be searched the same way."
+        },
+        {
+          "id": "engine-workspace-caption",
+          "caption": "The tiled workspace: corpus search, augmented editions, research reports, and artistry tools, each in its own movable pane."
+        },
+        {
+          "id": "engine-commentaries-caption",
+          "caption": "The commentaries portal: your own library, indexed locally, searched by a free local model. Nothing leaves your machine."
+        }
+      ]
+    },
+    {
+      "id": "trust",
+      "children": [
+        {
+          "id": "trust-kicker",
+          "kicker": "Trust"
+        },
+        {
+          "id": "trust-heading",
+          "heading": "Why you can trust what it returns"
+        },
+        {
+          "id": "trust-p1",
+          "text": "\"AI\" and \"trustworthy\" rarely sit comfortably in one sentence, so Origo is built as a ladder of guarantees. First, normal scholarly discipline: the corpus is built from identified editions with per-file provenance. Second, full traceability: every claim an AI assistant makes carries a citation chip that opens the source, and inference is visibly separated from evidence. Third, benchmarking: outputs are checked against resources translators already trust before they are recommended. Fourth, human review before anything is published for others."
+        },
+        {
+          "id": "trust-p2",
+          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold; below it, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing. Where a baseline is still provisional, the interface says so on screen."
+        },
+        {
+          "id": "trust-caption",
+          "caption": "The coach's evidence panel: every tool call and citation is listed beside the conversation, and grounded citations are visually distinct from the model's own inference."
+        }
+      ]
+    },
+    {
+      "id": "roadmap",
+      "children": [
+        {
+          "id": "roadmap-kicker",
+          "kicker": "Where this is heading"
+        },
+        {
+          "id": "roadmap-heading",
+          "heading": "From answers to resources"
+        },
+        {
+          "id": "roadmap-p1",
+          "text": "Fast answers are the floor, not the ceiling. The goal is for experts to use this system to produce open-access dictionaries, grammars, and commentaries: drafted with AI assistance over the corpus, verified by qualified scholars, and free to translate into any language of wider communication. A pilot on Mark 1 has already produced drafts I would set beside the commercial resources I own, and every step of that work is being saved as a reusable workflow so the next drafts start better."
+        },
+        {
+          "id": "roadmap-step1",
+          "label": "Semantic roles",
+          "text": "Tag the semantic role of every sentence component in the original languages, following the best-tested cross-linguistic classification. This unlocks corpus studies precise enough to ground lexicography."
+        },
+        {
+          "id": "roadmap-step2",
+          "label": "Speech-act scripts",
+          "text": "Group tagged speech acts into higher-order scripts, like the admission, regret, and request that together make an apology, so translators can compare whole social moves across cultures."
+        },
+        {
+          "id": "roadmap-step3",
+          "label": "Metaphors and frames",
+          "text": "Tag conceptual metaphors and semantic frames, first testing what scholarship has proposed, then extending it, so meaning above the word level becomes searchable."
+        },
+        {
+          "id": "roadmap-step4",
+          "label": "Dictionaries",
+          "text": "Original-language dictionaries with two or three senses per word, explaining further nuance through the metaphors and frames a sense participates in, instead of sense-lists twenty entries deep."
+        },
+        {
+          "id": "roadmap-step5",
+          "label": "Editions in more languages",
+          "text": "The same resources built in and translated into major languages of wider communication, not English only."
+        },
+        {
+          "id": "roadmap-step6",
+          "label": "Speech to speech",
+          "text": "A translator listens to a passage, thinks aloud, and the assistant engages their questions with cited evidence, by voice, in their language."
+        },
+        {
+          "id": "roadmap-p2",
+          "text": "At my current capacity this is months of focused building, not weeks. The sequence above matters more than any date: each layer is built and checked before the next one leans on it."
+        }
+      ]
+    },
+    {
+      "id": "needs",
+      "children": [
+        {
+          "id": "needs-kicker",
+          "kicker": "What it needs"
+        },
+        {
+          "id": "needs-heading",
+          "heading": "Four ways to move it faster"
+        },
+        {
+          "id": "needs-p1",
+          "text": "Everything above is running today on one practitioner's time and a consumer subscription's worth of AI. Four kinds of contribution would change its pace."
+        },
+        {
+          "id": "needs-1",
+          "label": "Compute for the pipeline",
+          "text": "The automated steps, tagging, translation, indexing, are throttled by AI capacity, not by design. More compute converts directly into corpus layers finished sooner."
+        },
+        {
+          "id": "needs-2",
+          "label": "Experts in the design loop",
+          "text": "Lexicographers, discourse linguists, and translation consultants to keep pressure-testing how the layers are defined before they harden."
+        },
+        {
+          "id": "needs-3",
+          "label": "Experts making resources",
+          "text": "Scholars who will use the system to produce creative-commons dictionaries, grammars, and commentaries that can be translated into languages of wider communication."
+        },
+        {
+          "id": "needs-4",
+          "label": "Teams willing to test",
+          "text": "Translation teams ready to try the system once it is far enough along, and to say plainly what works and what breaks."
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "children": [
+        {
+          "id": "model-kicker",
+          "kicker": "The model"
+        },
+        {
+          "id": "model-heading",
+          "heading": "Free for Bible translation, licensable beyond it"
+        },
+        {
+          "id": "model-p1",
+          "text": "My commitment is simple: for people doing Bible translation, these services stay free. That is who the bracelet is for."
+        },
+        {
+          "id": "model-p2",
+          "text": "But the same engine answers questions far beyond translation, and the wider world already pays well for far less capable tools. The system is being designed so it could be licensed outside the Bible translation movement, to academic, publishing, and general biblical-studies markets, with proceeds funding further development and the wider work of SIL around the world. The sources themselves are openly licensed and license-tracked per file, and commercial terms would be cleared per collection before any such offering."
+        }
+      ]
+    },
+    {
+      "id": "interop",
+      "children": [
+        {
+          "id": "interop-kicker",
+          "kicker": "The chief design commitment"
+        },
+        {
+          "id": "interop-heading",
+          "heading": "Built to work with everyone"
+        },
+        {
+          "id": "interop-p1",
+          "text": "Origo is not trying to replace anyone's translation software. It is augmentation, not competition: an exegetical foundation that other products in the Bible translation movement can build on, draw from, and hand their users."
+        },
+        {
+          "id": "interop-p2",
+          "text": "That commitment is structural, not sentimental. Texts and notes are plain markdown. Licenses travel with every file. The AI layer is optional and provider-agnostic, down to free local models. Resources produced from the corpus are creative-commons by design. And the roadmap's resource layers are being shaped so shared libraries and translation tools across the movement can consume them directly."
+        },
+        {
+          "id": "interop-p3",
+          "text": "If you build tools for Bible translation, my chief desire is that Origo makes your product better. I would rather adapt to your standards than invent competing ones."
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "children": [
+        {
+          "id": "about-heading",
+          "heading": "About"
+        },
+        {
+          "id": "about-p1",
+          "text": "Joshua Frost is an oral Bible translation exegete, researcher, and team leader with SIL International. He has served the Spoken English Bible since 2020, published his thesis on emotion exegesis for oral translation in 2025, and has spent his career developing methods translators use to study Scripture so they can bring it to life in their languages."
+        },
+        {
+          "id": "about-p2",
+          "text": "Both projects live in a private repository while the engine is still being built; access is available on request. Every screenshot in this essay is the app as it runs today, and both interactive demos replay unedited output from the live engine."
+        },
+        {
+          "id": "about-contact",
+          "label": "josh_frost@sil.org"
+        }
       ]
     }
   ]
