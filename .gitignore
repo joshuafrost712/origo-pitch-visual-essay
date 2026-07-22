@@ -1,0 +1,14 @@
+# Dependencies / build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Dev feedback inbox: batches are read, acted on, then deleted — never committed.
+feedback/incoming/*
+!feedback/incoming/.gitkeep
+
+# Screenshot tooling scratch (raw, unscrubbed captures live outside the repo)
+tools/raw-captures/
+
+# OS noise
+.DS_Store

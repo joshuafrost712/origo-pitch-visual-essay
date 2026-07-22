@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "sections": [
+    {
+      "id": "hero",
+      "children": [
+        { "id": "hero-title", "heading": "Origo" },
+        { "id": "hero-tagline", "text": "Back to the sources." }
+      ]
+    }
+  ]
+}

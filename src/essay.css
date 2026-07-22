@@ -1,0 +1,20 @@
+/* Placeholder stylesheet — the essay's design system lands with the sections. */
+:root {
+  --parchment: #fbfaf7;
+  --parchment-deep: #faf7f0;
+  --ink: #1f2a37;
+  --accent-blue: #2f6fd0;
+  --accent-teal: #0f9b8e;
+  --accent-teal-bright: #7fd8cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
