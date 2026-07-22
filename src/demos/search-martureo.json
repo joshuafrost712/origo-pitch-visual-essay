@@ -1,0 +1,122 @@
+{
+ "query": {
+  "lemma": "μαρτυρέω",
+  "note": "lemma search across all inflected forms"
+ },
+ "source": "frozen output of the live POST /api/search endpoint",
+ "n_matches": 72,
+ "results": [
+  {
+   "reference": "John 5:32",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 2,
+   "surfaces": [
+    "μαρτυρῶν",
+    "μαρτυρεῖ"
+   ],
+   "glosses": [
+    "bearing witness",
+    "he bears witness"
+   ],
+   "score": 2.0
+  },
+  {
+   "reference": "John 8:18",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 2,
+   "surfaces": [
+    "μαρτυρῶν",
+    "μαρτυρεῖ"
+   ],
+   "glosses": [
+    "bearing witness",
+    "bears witness"
+   ],
+   "score": 2.0
+  },
+  {
+   "reference": "Hebrews 11:4",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 2,
+   "surfaces": [
+    "ἐμαρτυρήθη",
+    "μαρτυροῦντος"
+   ],
+   "glosses": [
+    "he was testified",
+    "bearing witness"
+   ],
+   "score": 2.0
+  },
+  {
+   "reference": "3 John 1:12",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 2,
+   "surfaces": [
+    "μεμαρτύρηται",
+    "μαρτυροῦμεν"
+   ],
+   "glosses": [
+    "witness has been given",
+    "bear witness"
+   ],
+   "score": 2.0
+  },
+  {
+   "reference": "Matthew 23:31",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 1,
+   "surfaces": [
+    "μαρτυρεῖτε"
+   ],
+   "glosses": [
+    "you bear witness"
+   ],
+   "score": 1.0
+  },
+  {
+   "reference": "Luke 4:22",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 1,
+   "surfaces": [
+    "ἐμαρτύρουν"
+   ],
+   "glosses": [
+    "were bearing witness"
+   ],
+   "score": 1.0
+  },
+  {
+   "reference": "John 1:7",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 1,
+   "surfaces": [
+    "μαρτυρήσῃ"
+   ],
+   "glosses": [
+    "he might testify"
+   ],
+   "score": 1.0
+  },
+  {
+   "reference": "John 1:8",
+   "collection": "Greek NT",
+   "tier": "high",
+   "hits": 1,
+   "surfaces": [
+    "μαρτυρήσῃ"
+   ],
+   "glosses": [
+    "he might witness"
+   ],
+   "score": 1.0
+  }
+ ]
+}

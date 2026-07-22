@@ -1,0 +1,532 @@
+{
+ "passage": "Matthew 6:9-13 (the Lord’s Prayer)",
+ "source": "frozen output of the live /api/soundscape endpoint, g2p-greek-seg2.1",
+ "background": "4.5M-word contemporaneous Koine background (50 BC – AD 150)",
+ "colors": {
+  "alliteration": "#2f6fd0",
+  "onset_class_alliteration": "#0f9b8e",
+  "paronomasia": "#8a4fd0",
+  "polyptoton": "#b06ad6",
+  "homoioteleuton": "#d2871f",
+  "consonance": "#3f9d4a",
+  "place_manner_clustering": "#8a7a3c",
+  "assonance": "#cc5577"
+ },
+ "english": {
+  "9": "So then, this is how you should pray: ‘Our Father in heaven, hallowed be Your name.",
+  "10": "Your kingdom come, Your will be done, on earth as it is in heaven.",
+  "11": "Give us this day our daily bread.",
+  "12": "And forgive us our debts, as we also have forgiven our debtors.",
+  "13": "And lead us not into temptation, but deliver us from the evil one.’"
+ },
+ "tokens": [
+  {
+   "v": 9,
+   "s": "οὕτως",
+   "g": "Thus",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "οὖν",
+   "g": "therefore",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "προσεύχεσθε",
+   "g": "pray",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "ὑμεῖς",
+   "g": "you",
+   "p": "·"
+  },
+  {
+   "v": 9,
+   "s": "Πάτερ",
+   "g": "Father",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "ἡμῶν",
+   "g": "of us",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "ὁ",
+   "g": "who [is]",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "ἐν",
+   "g": "in",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "τοῖς",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "οὐρανοῖς",
+   "g": "heavens",
+   "p": "·"
+  },
+  {
+   "v": 9,
+   "s": "Ἁγιασθήτω",
+   "g": "hallowed be",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "τὸ",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "ὄνομά",
+   "g": "name",
+   "p": ""
+  },
+  {
+   "v": 9,
+   "s": "σου",
+   "g": "of You",
+   "p": ","
+  },
+  {
+   "v": 10,
+   "s": "ἐλθάτω",
+   "g": "Come",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "ἡ",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "βασιλεία",
+   "g": "kingdom",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "σου",
+   "g": "of You",
+   "p": ","
+  },
+  {
+   "v": 10,
+   "s": "γενηθήτω",
+   "g": "be done",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "τὸ",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "θέλημά",
+   "g": "will",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "σου",
+   "g": "of You",
+   "p": ","
+  },
+  {
+   "v": 10,
+   "s": "ὡς",
+   "g": "as",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "ἐν",
+   "g": "in",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "οὐρανῷ",
+   "g": "heaven",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "καὶ",
+   "g": "[so] also",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "ἐπὶ",
+   "g": "upon",
+   "p": ""
+  },
+  {
+   "v": 10,
+   "s": "γῆς",
+   "g": "earth",
+   "p": "·"
+  },
+  {
+   "v": 11,
+   "s": "Τὸν",
+   "g": "The",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "ἄρτον",
+   "g": "bread",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "ἡμῶν",
+   "g": "of us",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "τὸν",
+   "g": "-",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "ἐπιούσιον",
+   "g": "daily",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "δὸς",
+   "g": "grant",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "ἡμῖν",
+   "g": "us",
+   "p": ""
+  },
+  {
+   "v": 11,
+   "s": "σήμερον",
+   "g": "today",
+   "p": "·"
+  },
+  {
+   "v": 12,
+   "s": "καὶ",
+   "g": "And",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἄφες",
+   "g": "forgive",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἡμῖν",
+   "g": "us",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "τὰ",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ὀφειλήματα",
+   "g": "debts",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἡμῶν",
+   "g": "of us",
+   "p": ","
+  },
+  {
+   "v": 12,
+   "s": "ὡς",
+   "g": "as",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "καὶ",
+   "g": "also",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἡμεῖς",
+   "g": "we",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἀφήκαμεν",
+   "g": "forgive",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "τοῖς",
+   "g": "the",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ὀφειλέταις",
+   "g": "debtors",
+   "p": ""
+  },
+  {
+   "v": 12,
+   "s": "ἡμῶν",
+   "g": "of us",
+   "p": "·"
+  },
+  {
+   "v": 13,
+   "s": "καὶ",
+   "g": "And",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "μὴ",
+   "g": "not",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "εἰσενέγκῃς",
+   "g": "lead",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "ἡμᾶς",
+   "g": "us",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "εἰς",
+   "g": "into",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "πειρασμόν",
+   "g": "temptation",
+   "p": ","
+  },
+  {
+   "v": 13,
+   "s": "ἀλλὰ",
+   "g": "but",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "ῥῦσαι",
+   "g": "deliver",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "ἡμᾶς",
+   "g": "us",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "ἀπὸ",
+   "g": "from",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "τοῦ",
+   "g": "-",
+   "p": ""
+  },
+  {
+   "v": 13,
+   "s": "πονηροῦ",
+   "g": "evil",
+   "p": "."
+  }
+ ],
+ "hits": [
+  {
+   "type": "alliteration",
+   "plain": "matching word-beginnings",
+   "verses": "MAT 6:10",
+   "z": 5.44,
+   "rarity": "≈ 1 in 2",
+   "words": [
+    "γενηθήτω",
+    "γῆς"
+   ],
+   "tokens": [
+    18,
+    27
+   ]
+  },
+  {
+   "type": "alliteration",
+   "plain": "matching word-beginnings",
+   "verses": "MAT 6:9-6:10",
+   "z": 3.69,
+   "rarity": "≈ 1 in 2",
+   "words": [
+    "οὐρανοῖς",
+    "οὐρανῷ"
+   ],
+   "tokens": [
+    9,
+    24
+   ]
+  },
+  {
+   "type": "onset_class_alliteration",
+   "plain": "matching word-beginnings (sound family)",
+   "verses": "MAT 6:12",
+   "z": 3.52,
+   "rarity": "≈ 1 in 2",
+   "words": [
+    "ἄφες",
+    "ἡμῖν",
+    "ὀφειλήματα",
+    "ἡμῶν",
+    "ὡς",
+    "ἡμεῖς",
+    "ἀφήκαμεν",
+    "ὀφειλέταις",
+    "ἡμῶν"
+   ],
+   "tokens": [
+    37,
+    38,
+    40,
+    41,
+    42,
+    44,
+    45,
+    47,
+    48
+   ]
+  },
+  {
+   "type": "onset_class_alliteration",
+   "plain": "matching word-beginnings (sound family)",
+   "verses": "MAT 6:9-6:10",
+   "z": 2.92,
+   "rarity": "about even",
+   "words": [
+    "σου",
+    "σου",
+    "σου"
+   ],
+   "tokens": [
+    13,
+    17,
+    21
+   ]
+  },
+  {
+   "type": "alliteration",
+   "plain": "matching word-beginnings",
+   "verses": "MAT 6:13",
+   "z": 2.78,
+   "rarity": "about even",
+   "words": [
+    "πειρασμόν",
+    "πονηροῦ"
+   ],
+   "tokens": [
+    54,
+    60
+   ]
+  },
+  {
+   "type": "alliteration",
+   "plain": "matching word-beginnings",
+   "verses": "MAT 6:9-6:13",
+   "z": 2.78,
+   "rarity": "about even",
+   "words": [
+    "προσεύχεσθε",
+    "πονηροῦ"
+   ],
+   "tokens": [
+    2,
+    60
+   ]
+  },
+  {
+   "type": "onset_class_alliteration",
+   "plain": "matching word-beginnings (sound family)",
+   "verses": "MAT 6:10",
+   "z": 2.72,
+   "rarity": "about even",
+   "words": [
+    "ὡς",
+    "ἐν",
+    "οὐρανῷ"
+   ],
+   "tokens": [
+    22,
+    23,
+    24
+   ]
+  },
+  {
+   "type": "onset_class_alliteration",
+   "plain": "matching word-beginnings (sound family)",
+   "verses": "MAT 6:10",
+   "z": 2.56,
+   "rarity": "about even",
+   "words": [
+    "τὸ",
+    "θέλημά",
+    "σου"
+   ],
+   "tokens": [
+    19,
+    20,
+    21
+   ]
+  }
+ ]
+}
