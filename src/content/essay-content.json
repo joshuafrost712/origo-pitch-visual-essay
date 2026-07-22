@@ -2,6 +2,107 @@
   "version": "1.0.0",
   "sections": [
     {
+      "id": "tabs",
+      "children": [
+        {
+          "id": "nav-story",
+          "label": "The Story"
+        },
+        {
+          "id": "nav-work",
+          "label": "See It Work"
+        },
+        {
+          "id": "nav-engine",
+          "label": "The Engine"
+        },
+        {
+          "id": "nav-road",
+          "label": "The Road Ahead"
+        },
+        {
+          "id": "nav-together",
+          "label": "Working Together"
+        },
+        {
+          "id": "tab-work",
+          "kicker": "Three journeys",
+          "heading": "See it work",
+          "text": "Three real research problems, each taken from question to cited answer: a word study that decided a translation, a query no concordance can ask, and the artistry of the text made visible."
+        },
+        {
+          "id": "tab-engine",
+          "kicker": "Under the hood",
+          "heading": "The engine",
+          "text": "The database the demos run on, the research app built around it, and the ladder of guarantees that makes its answers worth trusting."
+        },
+        {
+          "id": "tab-road",
+          "kicker": "Trajectory",
+          "heading": "The road ahead",
+          "text": "Where this is heading, the four contributions that would move it faster, and how it stays free for the people it is for."
+        },
+        {
+          "id": "tab-together",
+          "kicker": "The invitation",
+          "heading": "Working together",
+          "text": "Interoperability with the rest of the Bible translation movement is the point of the design, not an afterthought."
+        },
+        {
+          "id": "ms-p52-credit",
+          "label": "Papyrus 52, John 18 · John Rylands Library, Manchester · public domain"
+        },
+        {
+          "id": "ms-p46-credit",
+          "label": "Papyrus 46, Paul's letters, c. AD 200 · Chester Beatty, Dublin · public domain"
+        },
+        {
+          "id": "ms-isaiah-credit",
+          "label": "The Great Isaiah Scroll, c. 125 BC · Israel Museum, Jerusalem · public domain"
+        },
+        {
+          "id": "ms-flood-credit",
+          "label": "The Flood Tablet, Epic of Gilgamesh XI · British Museum · CC0"
+        },
+        {
+          "id": "ms-sinaiticus-credit",
+          "label": "Codex Sinaiticus, Matthew 6 · public domain"
+        },
+        {
+          "id": "ms-poxy-caption",
+          "caption": "A private letter on papyrus: Hymenaeus writes to his brother Dionysius on 18 May, around AD 136, from Oxyrhynchus in Egypt. Tens of thousands of everyday documents like this are in the corpus; they are the closest thing we have to hearing ordinary people talk. (P.Oxy. 5100, public domain.)"
+        },
+        {
+          "id": "ms-sinaiticus-caption",
+          "caption": "The same page a fourth-century reader saw: Matthew 6 in Codex Sinaiticus, including the Lord's Prayer the demo below plays. (Public domain.)"
+        },
+        {
+          "id": "pipeline-title",
+          "label": "Every text moves through one pipeline"
+        },
+        {
+          "id": "pipeline-s1",
+          "label": "Original text"
+        },
+        {
+          "id": "pipeline-s2",
+          "label": "Interlinear + morphology"
+        },
+        {
+          "id": "pipeline-s3",
+          "label": "Literal translation"
+        },
+        {
+          "id": "pipeline-s4",
+          "label": "100 to 300 lines of metadata"
+        },
+        {
+          "id": "pipeline-s5",
+          "label": "Vector index"
+        }
+      ]
+    },
+    {
       "id": "hero",
       "children": [
         {

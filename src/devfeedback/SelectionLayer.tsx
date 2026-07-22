@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useFeedback } from './feedbackContext'
 
-// The essay is a single page, so every comment/edit records the same route.
-const pathname = '/'
+// The essay is hash-routed (#/story … #/together); record which tab a
+// comment/edit came from.
+function currentRoute(): string {
+  return window.location.hash.replace(/^#/, '') || '/story'
+}
 
 /** Where on the page is this selection? Nearest heading, then aria-label, then a snippet. */
 function deriveLocationLabel(range: Range): string {
@@ -113,7 +116,7 @@ export function SelectionLayer() {
         e.preventDefault()
         const a = readSelection()
         openComment({
-          route: pathname,
+          route: currentRoute(),
           selectionText: a?.text ?? '',
           locationLabel: a?.label ?? 'page',
         })
@@ -137,7 +140,7 @@ export function SelectionLayer() {
         style={{ position: 'static' }}
         onMouseDown={(e) => e.preventDefault()} // keep the selection alive through the click
         onClick={() => {
-          openComment({ route: pathname, selectionText: anchor.text, locationLabel: anchor.label })
+          openComment({ route: currentRoute(), selectionText: anchor.text, locationLabel: anchor.label })
           setAnchor(null)
         }}
       >
@@ -151,7 +154,7 @@ export function SelectionLayer() {
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => {
             openEdit({
-              route: pathname,
+              route: currentRoute(),
               locationLabel: anchor.label,
               nodeId: anchor.edit!.nodeId,
               field: anchor.edit!.field,
