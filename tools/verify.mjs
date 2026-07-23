@@ -41,21 +41,28 @@ for (const tab of TABS) {
   await page.screenshot({ path: join(OUT, `verify-tab-${tab}.png`), fullPage: false })
 }
 
-// 2. Work tab: search demo, soundscape demo, lightbox
+// 2. Work tab: search demo, Lord's-Prayer poem viewer, scroll stages, lightbox
 await page.goto(`${BASE}/#/work`, { waitUntil: 'networkidle' })
 await scrollThrough()
 await page.locator('.sd-btn').click()
 await page.waitForSelector('.sd-card', { timeout: 5000 })
 const cardCount = await page.locator('.sd-card').count()
-await page.locator('#journey1').screenshot({ path: join(OUT, 'verify-journey1.png') })
 
-const parono = page.locator('.ss-hit', { hasText: 'similar-sounding' }).first()
-await parono.scrollIntoViewIfNeeded()
-await parono.click()
-await page.waitForTimeout(400)
-const litCount = await page.locator('.ss-tok.hl').count()
+// Lord's-Prayer poem viewer
+const lpLines = await page.locator('.lp-line').count()
+const lpMetrics = await page.locator('.lp-metrics').count()
+const litOnLoad = await page.locator('.ss-tok.hl').count() // canonical findings lit by default
+const ssHits = await page.locator('.ss-hit').count()
+await page.locator('.ss-hit').first().click() // toggle the top finding off
+await page.waitForTimeout(300)
+const litAfterToggle = await page.locator('.ss-tok.hl').count()
 await page.locator('#journey3 .demo').screenshot({ path: join(OUT, 'verify-soundscape.png') })
 
+// Scroll stages present (search facets + aligned makarisms)
+const stageCount = await page.locator('.scrollstage').count()
+const stageImgs = await page.locator('.scrollstage-viewport img').count()
+
+// lightbox on the reader shot
 await page.locator('#journey1 .shot-frame').first().click()
 await page.waitForSelector('.lightbox img', { timeout: 3000 })
 const lightboxShown = await page.locator('.lightbox img').isVisible()
@@ -63,15 +70,31 @@ await page.keyboard.press('Escape')
 await page.waitForTimeout(250)
 const lightboxClosed = (await page.locator('.lightbox').count()) === 0
 
-// 3. Engine tab: stats + pipeline animate in
+// manuscript-figure lightbox (the burial art row)
+await page.locator('#journey2 .ms-figbtn').first().click()
+await page.waitForSelector('.lightbox img', { timeout: 3000 })
+const msLightboxShown = await page.locator('.lightbox img').isVisible()
+await page.keyboard.press('Escape')
+await page.waitForTimeout(200)
+
+// 3. Engine tab: pipeline animates + interactive trust diagram
 await page.goto(`${BASE}/#/engine`, { waitUntil: 'networkidle' })
 await page.locator('#engine .stats').scrollIntoViewIfNeeded()
-await page.waitForTimeout(1800)
+await page.waitForTimeout(1200)
 const pipelineOn = await page.evaluate(() => {
   document.querySelector('.pipeline')?.scrollIntoView({ block: 'center' })
   return new Promise((r) => setTimeout(() => r(document.querySelector('.pipeline')?.classList.contains('on')), 900))
 })
+await page.locator('.trust-diagram').scrollIntoViewIfNeeded()
+await page.waitForTimeout(300)
+const tdNodes = await page.locator('.td-node').count()
+const tdTitle0 = await page.locator('.td-panel-title').innerText()
+await page.locator('.td-node').nth(3).click()
+await page.waitForTimeout(250)
+const tdTitle3 = await page.locator('.td-panel-title').innerText()
+const tdChanged = tdTitle0 !== tdTitle3
 await page.locator('#engine').screenshot({ path: join(OUT, 'verify-engine.png') })
+await page.locator('.trust-diagram').screenshot({ path: join(OUT, 'verify-trust-diagram.png') })
 
 // 4. Dev endpoints: feedback inbox + content edit round-trip + stale guard
 const devProbe = await page.evaluate(async () => {
@@ -120,13 +143,34 @@ for (const tab of TABS) {
     () => document.documentElement.scrollWidth > document.documentElement.clientWidth + 2,
   )
 }
-await page.goto(`${BASE}/#/story`, { waitUntil: 'networkidle' })
+await page.goto(`${BASE}/#/work`, { waitUntil: 'networkidle' })
 await page.waitForTimeout(500)
 await page.screenshot({ path: join(OUT, 'verify-mobile.png') })
 
 console.log(
   JSON.stringify(
-    { missing, navActive, cardCount, litCount, lightboxShown, lightboxClosed, pipelineOn, devProbe, selButtons, hOverflow, errors: errors.slice(0, 6) },
+    {
+      missing,
+      navActive,
+      cardCount,
+      lpLines,
+      lpMetrics,
+      litOnLoad,
+      litAfterToggle,
+      ssHits,
+      stageCount,
+      stageImgs,
+      lightboxShown,
+      lightboxClosed,
+      msLightboxShown,
+      pipelineOn,
+      tdNodes,
+      tdChanged,
+      devProbe,
+      selButtons,
+      hOverflow,
+      errors: errors.slice(0, 6),
+    },
     null,
     2,
   ),

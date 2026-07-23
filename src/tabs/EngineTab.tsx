@@ -4,12 +4,12 @@ import { TabHero } from '../components/TabHero'
 import { Shot } from '../components/Shot'
 import { Counter } from '../components/Counter'
 import { Pipeline } from '../illustrations/Pipeline'
+import { TrustDiagram } from '../illustrations/TrustDiagram'
 import { findNode } from '../lib/content/loader'
 
 import msIsaiah from '../assets/manuscripts/isaiah-scroll.jpg'
 import shotWorkspace from '../assets/shots/app-workspace.png'
 import shotCommentaries from '../assets/shots/commentaries-landing.png'
-import shotCoach from '../assets/shots/coach-landing.png'
 
 const STATS: Array<{ id: string; approx?: boolean }> = [
   { id: 'engine-stat-files' },
@@ -56,7 +56,10 @@ export function EngineTab() {
         <div className="container" style={{ padding: 0 }}>
           <Prose ids={['trust-p1', 'trust-p2']} />
         </div>
-        <Shot src={shotCoach} captionId="trust-caption" />
+        <div className="container" style={{ padding: 0 }}>
+          <Prose ids={['trust-lead']} />
+        </div>
+        <TrustDiagram />
       </Section>
     </>
   )

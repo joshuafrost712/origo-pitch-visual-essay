@@ -28,5 +28,8 @@ fetch "Codex%20Sinaiticus%20Matthew%206%2C4-32.JPG" sinaiticus-matt6.jpg 0
 fetch "POxy%205100.jpg" poxy5100-letter.jpg 0
 fetch "Great%20Isaiah%20Scroll.jpg" isaiah-scroll.jpg 2400
 fetch "British%20Museum%20Flood%20Tablet.jpg" flood-tablet.jpg 0
+fetch "William-Adolphe%20Bouguereau%20(1825-1905)%20-%20Le%20saintes%20femmes%20au%20tombeau%20(1890)%20img%202.jpg" myrrhbearers.jpg 1600
+fetch "Hermitage%20hall%20143%20-%2011%20-%20Icon%20with%20Myrrhbearers%20at%20the%20Tomb.jpg" empty-tomb-angel.jpg 1600
+fetch "Jerusalem-Garden-Tomb-KTM-1271.jpg" jerusalem-tomb.jpg 1600
 
 ls -la "$OUT"

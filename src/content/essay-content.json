@@ -77,6 +77,18 @@
           "caption": "The same page a fourth-century reader saw: Matthew 6 in Codex Sinaiticus, including the Lord's Prayer the demo below plays. (Public domain.)"
         },
         {
+          "id": "ms-myrrhbearers-caption",
+          "caption": "The holy women reach the tomb at first light. Luke says they came to anoint the body, and how we feel their devotion depends on knowing whose task that anointing was. (William-Adolphe Bouguereau, 1890; public domain.)"
+        },
+        {
+          "id": "ms-icon-caption",
+          "caption": "The same moment in a later Orthodox icon: the myrrh-bearing women meet the angel at the empty tomb. (Hermitage collection; photo Netelo, CC BY-SA 4.0.)"
+        },
+        {
+          "id": "ms-tomb-caption",
+          "caption": "A first-century rock-cut tomb in Jerusalem, of the kind that was sealed with a rolling stone. (The Garden Tomb; photo Bukvoed, CC BY 4.0.)"
+        },
+        {
           "id": "pipeline-title",
           "label": "Every text moves through one pipeline"
         },
@@ -165,7 +177,7 @@
         },
         {
           "id": "gap-p1",
-          "text": "If you work anywhere near Bible translation, you have felt it. The concise resources translation teams rely on answer roughly 60% of the questions a real team asks. The other 40% gets filled by the translator's own assumptions, because there was nothing else within reach to consult."
+          "text": "If you work anywhere near Bible translation, you have felt it. In my experience, the concise resources translation teams rely on answer roughly 60% of the questions a real team asks. The other 40% gets filled by the translator's own assumptions, because there was nothing else within reach to consult."
         },
         {
           "id": "gap-p2",
@@ -186,11 +198,11 @@
         },
         {
           "id": "j1-heading",
-          "heading": "A word that decides a translation"
+          "heading": "One word can make a world of difference"
         },
         {
           "id": "j1-problem",
-          "text": "An oral translation team is deciding how to render μαρτυρέω, the word English Bibles translate as \"testify\" or \"bear witness.\" Get it wrong and every courtroom scene, every apostolic claim, every \"testimony\" in the New Testament drifts with it."
+          "text": "My oral translation team needed to decide how to translate martureo, commonly translated as \"bear witness.\" We needed to know exactly how the word was used in legal settings and when it was used metaphorically, because \"witness\" has taken on an important spiritual meaning in contemporary American Christianity. Changing from the norm would require substantial evidence."
         },
         {
           "id": "j1-question",
@@ -198,7 +210,7 @@
         },
         {
           "id": "j1-demo-lead",
-          "text": "In Origo, that study starts with one search. Type the lemma and the engine finds every inflected form, in every text, with the English gloss beside each hit. Try it below: this is a working recreation of the real search screen, running on frozen output from the live engine."
+          "text": "In Origo, that study started with one search with the AI research assistant."
         },
         {
           "id": "j1-demo-caption",
@@ -227,23 +239,23 @@
         },
         {
           "id": "j2-problem",
-          "text": "Now a harder one. Speech in Scripture is soaked in emotion, and emotion changes what words do. A translator working through a confrontation scene wants to know how people in the ancient world actually talked when they were frustrated, and whether a key word behaves differently in that kind of speech."
+          "text": "Now a harder one, straight from my own thesis on the emotions of Luke 24. At dawn the women come to the tomb to anoint Jesus's body. How that scene feels, and how we read the apostles who dismissed their report, turns on something the commentaries never settled: in that world, who was actually expected to prepare and anoint a body for burial? Was it women's work, or did men share it?"
         },
         {
           "id": "j2-question",
-          "quote": "Where does this word's root appear in dialogue, while the speaker is frustrated, talking about this topic, anywhere in the ancient world?"
+          "quote": "Across the ancient world, who actually prepared and anointed a body for burial, and was that women's work or did men share it?"
         },
         {
           "id": "j2-p1",
-          "text": "No concordance can ask that. Origo can, because every text in the database carries 100 to 300 lines of metadata: era, language, people, places, the speech acts in the text, and the emotional and social dynamics of every conversation, including who holds power, how close the parties are, and what is at stake. Across the corpus that adds up to a social map of 33,000 tagged participants in 23,000 interactions."
+          "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every text in the database carries 100 to 300 lines of metadata: era, language, people, places, the actions and speech acts in a scene, and the social dynamics of every interaction, including who holds power, how close the parties are, and what is at stake. Even with only a fraction of the corpus yet tagged, that already adds up to a social map of 33,000 participants across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
         },
         {
           "id": "j2-caption",
-          "caption": "The AI refiner on the real search page: describe what you want in plain language, choose traditions and period, and a local model fills in the precise filters. Every facet, including themes, entities, and the social-world layer, is also available by hand in the rail."
+          "caption": "The search page's own facets, swept end to end. Describe what you want in plain language and a local model fills in the precise filters, or set them by hand in the rail: themes, entities, speech acts, and the whole social-world layer. This is the kind of query the burial question needs."
         },
         {
           "id": "j2-payoff",
-          "text": "Specificity like this, across a corpus this wide, is the difference between a research season and an afternoon. The data collection and organization that used to take months of a specialist's time now takes hours, and the specialist's judgment gets spent where it belongs: on what the evidence means."
+          "text": "When I wrote that thesis, no resource I owned could answer the burial-role question, so I set it aside, and the emotional reading of the scene stayed a notch less certain than it should have been. This is exactly the gap Origo is built to close. A corpus like this, queried across the whole ancient world in an afternoon, would have saved me hours of searching and spared the passage a real blind spot. The specialist's judgment then gets spent where it belongs: on what the evidence means."
         }
       ]
     },
@@ -272,7 +284,7 @@
         },
         {
           "id": "j3-structure-caption",
-          "caption": "The Structure viewer on Mark 1: an epistrophe scored at 10σ, rarer than 1 in 100,000 against the Greek New Testament itself."
+          "caption": "The Structure viewer on Mark 1: an epistrophe, the same word landing at the end of clause after clause, scored at 10σ and colour-graded by strength, rarer than 1 in 100,000 against the Greek New Testament itself. A run like that is the author building emphasis on purpose, exactly the shaping an oral translator will want to carry over."
         },
         {
           "id": "j3-structure-caption-aligned",
@@ -280,7 +292,7 @@
         },
         {
           "id": "j3-demo-lead",
-          "text": "Here is the Soundscape viewer's own output on the Lord's Prayer, as an interactive miniature. Tap a finding to light up the words that carry it."
+          "text": "Here is the Lord's Prayer as the Soundscape viewer hears it: the Greek laid out line by line with its word and syllable counts, and the sound plays the detector found listed on the right. The three most significant are already lit; tap any finding to add or remove its colour."
         },
         {
           "id": "j3-demo-caption",
@@ -367,11 +379,49 @@
         },
         {
           "id": "trust-p2",
-          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold; below it, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing. Where a baseline is still provisional, the interface says so on screen."
+          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold, and that number is not a figure the model invents about itself: it is scored against defined criteria. For a documentary text, for instance, the core elements of the transaction, who the parties are and what changed hands, must both be fully present and none may be lost, and a high self-assessment is overridden when the criteria contradict it. That is a stricter bar than we ask of most human translators. Below the line, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing, and where a baseline is still provisional, the interface says so on screen."
         },
         {
           "id": "trust-caption",
           "caption": "The coach's evidence panel: every tool call and citation is listed beside the conversation, and grounded citations are visually distinct from the model's own inference."
+        },
+        {
+          "id": "trust-lead",
+          "text": "That is the discipline in principle. Here is how it actually runs, as a text moves from a raw manuscript into the corpus. Click any step to see what happens there, which kind of model does the work, and where a human has to sign off."
+        },
+        {
+          "id": "qc-title",
+          "label": "How a text earns its place in the corpus"
+        },
+        {
+          "id": "qc-1",
+          "label": "Identified sources",
+          "text": "Every text is built from a named, published edition, and each file carries its own license and provenance. Nothing enters the corpus anonymously, so any claim can be traced back to a source a scholar already recognises. This is ordinary academic discipline, done before any AI touches the text."
+        },
+        {
+          "id": "qc-2",
+          "label": "Translation, by the strongest model",
+          "text": "When a text has no usable English translation, the hardest judgment step, it goes to the strongest available frontier model, which translates it and returns a structured self-assessment of its own confidence. The heavy reasoning is deliberately given to the most capable model, not the cheapest, because this is where errors would do the most damage."
+        },
+        {
+          "id": "qc-3",
+          "label": "The 95% gate",
+          "text": "A gate then routes that result against defined criteria, not a number the model invents about itself. A translation clears only if its confidence is at or above 95 and a rubric of the text's core elements confirms it; a high self-score is overridden when the rubric contradicts it. Below the line the text is marked untranslated rather than guessed. The empirical basis is real: on one hard book, the model cleared none of the texts without the rubric and almost all of them with it."
+        },
+        {
+          "id": "qc-4",
+          "label": "Tagging, kept in its lane",
+          "text": "Only a cleared English translation is handed to a fast local open model for summary and theme tagging. That model works from the English alone; it never reads the raw Greek, Latin, or Hebrew. A model is only trusted with a task it can actually judge, so the languages it cannot read are never left to its guesses."
+        },
+        {
+          "id": "qc-5",
+          "label": "Deterministic validation",
+          "text": "Every enriched text then runs a deterministic gate: schema checks, a controlled vocabulary, and a fidelity audit. This step has no model in it at all. It is plain, repeatable code, and it is the final automated arbiter before anything is allowed to commit."
+        },
+        {
+          "id": "qc-6",
+          "label": "A human signs off",
+          "text": "Nothing commits automatically. Findings land in a review queue, and a qualified person has to approve them before any resource is published for someone else to rely on. The system is fast because the machine does the gathering; it is trustworthy because a human still owns the judgment."
         }
       ]
     },
