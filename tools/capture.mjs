@@ -128,11 +128,64 @@ await shot('editions-mark1', async () => {
   await page.waitForTimeout(1500)
 })
 
-// ---- Tiled workspace (deterministic demo layout) ------------------------------
+// ---- Tiled workspace ----------------------------------------------------------
+// NOT `?layout=demo`: that layout opens the `editions` viewer, whose tab label in
+// the app is "Aquifer Editions", and no Aquifer label may ship on the public
+// essay (2026-08-04 spec, item 6). So the layout is seeded through the shell's
+// own saved-workspace key instead, which is a real workspace a real user could
+// arrange, not a mock. Search + Notes beside Reports / Research / Artistry.
 await shot('app-workspace', async () => {
-  await page.goto(BASE + '/app?layout=demo', { waitUntil: 'domcontentloaded' })
-  await page.waitForTimeout(4000)
-}, { settle: 1500 })
+  await page.goto(BASE + '/app', { waitUntil: 'domcontentloaded' })
+  await page.evaluate(() => {
+    const mk = (v, i) => ({ id: 't' + i, viewer: v })
+    const a = [mk('search', 1), mk('notes', 2)]
+    const b = [mk('research', 3), mk('reports', 4), mk('artistry', 5)]
+    localStorage.setItem(
+      'origo.workspace.v2',
+      JSON.stringify({
+        activePane: 'pA',
+        panes: [
+          { id: 'pA', flex: 1.15, activeTab: 't1', tabs: a },
+          { id: 'pB', flex: 1, activeTab: 't4', tabs: b },
+        ],
+      }),
+    )
+  })
+  await page.goto(BASE + '/app', { waitUntil: 'domcontentloaded' })
+  await page.waitForTimeout(4500)
+  // Run a real query inside the search pane's iframe so the workspace shot shows
+  // the tool doing something rather than an empty results column.
+  const search = page.frames().find((f) => new URL(f.url()).pathname === '/')
+  if (search) {
+    // Set + run through the DOM rather than through the pointer: inside a narrow
+    // workspace pane the filter rail auto-collapses, so `fill()` would wait
+    // forever on a field that is real but not visible.
+    await search.evaluate(() => {
+      let p = document.getElementById('q-lemma')?.closest('details')
+      while (p) {
+        p.open = true
+        p = p.parentElement?.closest('details') ?? null
+      }
+      const el = document.getElementById('q-lemma')
+      if (el) {
+        el.value = 'μαρτυρέω'
+        el.dispatchEvent(new Event('input', { bubbles: true }))
+        el.dispatchEvent(new Event('change', { bubbles: true }))
+      }
+      document.getElementById('run')?.click()
+    })
+    await search
+      .waitForFunction(
+        () => {
+          const r = document.getElementById('results-list')
+          return r && !/searching/i.test(r.textContent || '') && r.children.length > 0
+        },
+        null,
+        { timeout: 20000 },
+      )
+      .catch(() => {})
+  }
+}, { settle: 2000 })
 
 // ---- Coach (landing state; no real transcripts) -------------------------------
 await shot('coach-landing', async () => {

@@ -25,6 +25,10 @@
           "label": "Working Together"
         },
         {
+          "id": "nav-quality",
+          "label": "Quality"
+        },
+        {
           "id": "tab-work",
           "kicker": "Three journeys",
           "heading": "See it work",
@@ -49,6 +53,12 @@
           "text": "Interoperability with the rest of the Bible translation movement is the point of the design, not an afterthought."
         },
         {
+          "id": "tab-quality",
+          "kicker": "Checkable, not just claimed",
+          "heading": "Quality control",
+          "text": "What stands between a raw manuscript and an answer you can rely on: the six stages every text passes through, what each check actually proves, and the five holes that are not closed yet."
+        },
+        {
           "id": "ms-p52-credit",
           "label": "Papyrus 52, John 18 · John Rylands Library, Manchester · public domain"
         },
@@ -67,6 +77,10 @@
         {
           "id": "ms-sinaiticus-credit",
           "label": "Codex Sinaiticus, Matthew 6 · public domain"
+        },
+        {
+          "id": "ms-poxy-credit",
+          "label": "P.Oxy. 5100, a private letter on papyrus, c. AD 136 · public domain"
         },
         {
           "id": "ms-poxy-caption",
@@ -181,11 +195,121 @@
         },
         {
           "id": "gap-p2",
-          "text": "The knowledge to answer those questions exists. But assembling it takes a specialist months, working in English, behind expensive licenses. I began my career in SIL doing exactly this kind of research, so I know what it costs. Some of that research changed how key passages were translated. More of it is still sitting in folders, unfinished, because the hours ran out."
+          "text": "The knowledge to answer those questions exists. But assembling it takes a specialist months, working in English, behind expensive licenses. I began my career in SIL doing exactly this kind of research, so I know what it costs. Some of that research changed how key passages were translated. More of it is still sitting in folders, unfinished, because the hours ran out. The shortfall is not for lack of sources. In a July 2026 survey of the 616 resources the largest open platform offers for a single chapter, ancient sources were cited by name throughout and quoted exactly once."
+        },
+        {
+          "id": "sc1-figure-alt",
+          "text": "Two panels compared. On the left, a translator consults two dictionaries, then scatters across many disconnected databases, and the notes fade to dashed outlines beside an empty result. On the right, the same notes flow along drawn paths into one collated corpus and land as a filled result card carrying both a lexical and a cultural answer."
+        },
+        {
+          "id": "sc1-before-label",
+          "label": "The way it goes now"
+        },
+        {
+          "id": "sc1-before-caption",
+          "caption": "Two dictionaries that were not written for this question, a dozen databases that do not talk to each other, and a schedule that runs out first."
+        },
+        {
+          "id": "sc1-after-label",
+          "label": "With one collated corpus"
+        },
+        {
+          "id": "sc1-after-caption",
+          "caption": "Uniform metadata, lemmas and morphology on the originals, and search that takes a plain-language question. The translator does their own research, and not only the lexical kind: the cultural question becomes a query too."
         },
         {
           "id": "gap-p3",
-          "text": "Recent AI breakthroughs clearly ought to help. The open question is what, specifically, they should be aimed at. What follows is my answer, told through three real research problems."
+          "text": "Recent AI breakthroughs clearly ought to help. The open question is what, specifically, they should be aimed at, and my answer has three parts. The first is the picture above. Here are the other two."
+        }
+      ]
+    },
+    {
+      "id": "vision2",
+      "children": [
+        {
+          "id": "sc2-kicker",
+          "kicker": "The second change"
+        },
+        {
+          "id": "sc2-heading",
+          "heading": "Write the brief, then read the sources"
+        },
+        {
+          "id": "sc2-p1",
+          "text": "The second change is what happens once a question is well posed. You write a detailed research brief, the way you would for a research assistant who is good but needs telling. An agent collects the evidence across the corpus, organises it, and writes a synthesis at whatever length you asked for."
+        },
+        {
+          "id": "sc2-p2",
+          "text": "Then you read all of the sources yourself and come to your own conclusions, especially on the decisions that matter. That order is the whole design. The machine does the gathering, which is the part that used to eat the week. The reading and the judgment stay with the person who has to defend the result."
+        },
+        {
+          "id": "sc2-p3",
+          "text": "This is not hypothetical. One key-term study run exactly this way went from roughly five to twenty hours of specialist work down to about one, and its evidence changed a real translation decision across a whole New Testament. See It Work tells that story in full."
+        },
+        {
+          "id": "sc2-figure-alt",
+          "text": "Two panels compared. On the left, a long stack of dashed note outlines accumulates with no report at the end of it. On the right, a brief at the top sends drawn paths into a small set of gathered sources, which pass a gate and compile into two filled report cards."
+        },
+        {
+          "id": "sc2-before-label",
+          "label": "Gathering by hand"
+        },
+        {
+          "id": "sc2-before-caption",
+          "caption": "Five to twenty hours of collecting before the thinking can start, and often the hours run out before it does."
+        },
+        {
+          "id": "sc2-after-label",
+          "label": "Brief, gather, synthesise"
+        },
+        {
+          "id": "sc2-after-caption",
+          "caption": "About an hour to organised, cited evidence, with every source still in front of you to read and to disagree with."
+        }
+      ]
+    },
+    {
+      "id": "vision3",
+      "children": [
+        {
+          "id": "sc3-kicker",
+          "kicker": "The third change"
+        },
+        {
+          "id": "sc3-heading",
+          "heading": "Artistry you can actually see"
+        },
+        {
+          "id": "sc3-p1",
+          "text": "Normally the poetry of the original is invisible to a translation team. You can read in a commentary that it is there. You cannot see it, and you certainly cannot see where it is."
+        },
+        {
+          "id": "sc3-p2",
+          "text": "The artistry analysis puts it on the text. The sound play in the Lord’s Prayer, the shape of a parallel series, each finding graded against ordinary contemporaneous language so that a pattern counts only when chance cannot explain it. See It Work runs that analysis live on Matthew 6, with the real detector output."
+        },
+        {
+          "id": "sc3-p3",
+          "text": "Then the part that matters most for a team working through a language of wider communication: comparable examples of what the biblical language is doing, rendered in the language the team is actually using. Not a note saying a pun is present, but a demonstration of what that kind of pun does, in words they think in."
+        },
+        {
+          "id": "sc3-figure-alt",
+          "text": "Two panels compared. On the left, a block of text sits beside a dashed note that merely asserts artistry is present, with nothing marked on the text. On the right, the same lines carry marked spans, each joined by a drawn path to a graded finding, and below them a filled card of comparable examples in the team’s own language."
+        },
+        {
+          "id": "sc3-before-label",
+          "label": "Told that it is there"
+        },
+        {
+          "id": "sc3-before-caption",
+          "caption": "A sentence in a commentary. Nothing marked on the text, no way to judge how strong the pattern is, nothing a listening audience could be given."
+        },
+        {
+          "id": "sc3-after-label",
+          "label": "Shown where, and how strongly"
+        },
+        {
+          "id": "sc3-after-caption",
+          "caption": "The artistry located on the line, graded against ordinary Koine, and matched to comparable examples in the language the team is translating into."
         }
       ]
     },
@@ -322,22 +446,22 @@
         {
           "id": "engine-stat-files",
           "label": "indexed files",
-          "note": "77674"
+          "note": "80036"
         },
         {
           "id": "engine-stat-collections",
           "label": "collections",
-          "note": "112"
+          "note": "116"
         },
         {
           "id": "engine-stat-works",
           "label": "distinct works",
-          "note": "45737"
+          "note": "45746"
         },
         {
           "id": "engine-stat-tokens",
           "label": "tokens of non-biblical Greek, lemma-searchable",
-          "note": "12160000"
+          "note": "12159873"
         },
         {
           "id": "engine-stat-links",
@@ -354,11 +478,112 @@
         },
         {
           "id": "engine-workspace-caption",
-          "caption": "The tiled workspace: corpus search, augmented editions, research reports, and artistry tools, each in its own movable pane."
+          "caption": "The tiled workspace, with a live lemma search running beside the research reports it feeds. Notes and the artistry tools are a tab away in the same panes, and every pane moves."
         },
         {
           "id": "engine-commentaries-caption",
           "caption": "The commentaries portal: your own library, indexed locally, searched by a free local model. Nothing leaves your machine."
+        }
+      ]
+    },
+    {
+      "id": "state",
+      "children": [
+        {
+          "id": "state-kicker",
+          "kicker": "Where it actually stands"
+        },
+        {
+          "id": "state-heading",
+          "heading": "What works today, and what remains"
+        },
+        {
+          "id": "state-p1",
+          "text": "A pitch is easy to write in the future tense, so here is the present tense in two columns. Everything on the left you could use this week; every screenshot in this essay comes from it. Everything on the right is real work still to do, and it is what the road ahead is for."
+        },
+        {
+          "id": "state-now-title",
+          "label": "Working today"
+        },
+        {
+          "id": "state-rest-title",
+          "label": "Still to do"
+        },
+        {
+          "id": "state-now-1",
+          "label": "Structured search",
+          "text": "Precision search over the whole corpus: a word’s root, the era and region, the theme, the speech act, the social dynamics of a scene, and the emotion in it. Describe what you want in plain language and a local model fills the filters, or set them by hand."
+        },
+        {
+          "id": "state-now-2",
+          "label": "The literary-analysis views",
+          "text": "Structure, sound play, semantic domains, cohesion, rhythm, figuration, and component order. Each one scores its findings against a background rather than asserting them."
+        },
+        {
+          "id": "state-now-3",
+          "label": "The aligned reader",
+          "text": "Original language and English side by side, aligned to the scholarly divisions, with search hits carried through into the text."
+        },
+        {
+          "id": "state-now-4",
+          "label": "Workspace, reports, and notes",
+          "text": "A tiled workspace where search, reading, artistry, research reports, and notes sit in movable panes. Notes are plain markdown files you own and can open in any editor. Your own legally owned PDFs sit beside the corpus and are searched the same way, by a local model, without leaving your machine."
+        },
+        {
+          "id": "state-now-5",
+          "label": "The AI research coach",
+          "text": "A plain-language question becomes a precise research brief, runs against the corpus, and comes back cited, with every tool call listed beside the answer and grounded citations visually separated from the model’s own inference."
+        },
+        {
+          "id": "state-rest-1",
+          "label": "Translations",
+          "text": "About 3,150 texts are still in the queue for an English translation, 1,317 of them Greco-Roman literary works. Below the confidence gate a text is marked untranslated rather than guessed, which is the right behaviour and also why the queue is long."
+        },
+        {
+          "id": "state-rest-2",
+          "label": "Theme tags",
+          "text": "Roughly 37,000 low-value documentary texts carry template summaries rather than real theme tags. They are indexed and findable; they are not yet richly described, and the tagging cannot start until the translation does."
+        },
+        {
+          "id": "state-rest-3",
+          "label": "Modern English",
+          "text": "Much of the freely licensed English in the corpus is free precisely because it is nineteenth-century, and it reads like it. Everything in that class needs a modern-English revision."
+        },
+        {
+          "id": "state-rest-4",
+          "label": "The reference layer",
+          "text": "Dictionaries, grammars, and background commentaries built on the corpus and verified by scholars. Designed in detail, and not begun."
+        },
+        {
+          "id": "state-rest-5",
+          "label": "The rest of the tools",
+          "text": "Twenty-one tools and views run today, which is under half of the analytical methods the design calls for. The remaining ones are specified rather than speculative, and they cost time rather than money."
+        },
+        {
+          "id": "state-rest-6",
+          "label": "Honest statistics",
+          "text": "The rarity numbers the artistry tools display are being rebuilt. The current scale conflates how long a pattern is with how artful it is, and applies no correction for how many places were searched. Where a baseline is provisional the interface says so on screen, and this correction is at the top of the queue, ahead of any new viewer."
+        }
+      ]
+    },
+    {
+      "id": "pkm",
+      "children": [
+        {
+          "id": "pkm-kicker",
+          "kicker": "Notes you keep"
+        },
+        {
+          "id": "pkm-heading",
+          "heading": "Built for how people actually learn"
+        },
+        {
+          "id": "pkm-p1",
+          "text": "The knowledge layer rests on two models that have already proved themselves. Luhmann’s Zettelkasten is a networked slip-box: notes are small, atomic, and linked to each other, and the links are where the thinking accumulates. Leonardo’s notebooks are the other kind, observational and undisciplined, a place to put what you noticed before you know what it is for. Origo makes room for both, and keeps them distinct, because they are good at different things."
+        },
+        {
+          "id": "pkm-p2",
+          "text": "In practice that means a question captured by voice on a walk can become linked, cited research at the desk that evening, saved as notes tagged to the verses and topics they touch, so the next study session starts where the last one ended. The files stay plain markdown on your own machine. The interface decisions underneath this are not guesses either: they come out of my own research on cognition, learning, and memory, and out of five years of refining this workflow for my own study before any of it became software."
         }
       ]
     },
@@ -379,7 +604,7 @@
         },
         {
           "id": "trust-p2",
-          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold, and that number is not a figure the model invents about itself: it is scored against defined criteria. For a documentary text, for instance, the core elements of the transaction, who the parties are and what changed hands, must both be fully present and none may be lost, and a high self-assessment is overridden when the criteria contradict it. That is a stricter bar than we ask of most human translators. Below the line, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing, and where a baseline is still provisional, the interface says so on screen."
+          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold, and that number is not a figure the model invents about itself: it is scored against defined criteria. For a documentary text, for instance, the core elements of the transaction, who the parties are and what changed hands, must both be fully present and none may be lost, and a high self-assessment is overridden when the criteria contradict it. That is a stricter bar than we ask of most human translators. Below the line, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing, and where a baseline is still provisional, the interface says so on screen. Above the individual checks sits a five-layer validator that runs on every change, and the corpus currently stands at zero schema or parse errors across all 80,036 files."
         },
         {
           "id": "trust-caption",
@@ -426,6 +651,237 @@
       ]
     },
     {
+      "id": "qmap",
+      "children": [
+        {
+          "id": "qmap-kicker",
+          "kicker": "Stage by stage"
+        },
+        {
+          "id": "qmap-heading",
+          "heading": "Every check, and what it does not reach"
+        },
+        {
+          "id": "qmap-p1",
+          "text": "That is the ladder in principle, and the walk-through above is how a single text climbs it. This is the whole apparatus at once: six stages, and every named check over them with its own boundary written next to it."
+        },
+        {
+          "id": "qmap-p2",
+          "text": "A diagram is a persuasive object, and a green box labelled “quality control” drawn over a check that is sampled, warn-only, or unwritten will be believed. So each component below carries its state, and the known holes are named on the page rather than filtered off it. Click any component to read what its check proves and where it stops."
+        },
+        {
+          "id": "qmap-legend-title",
+          "label": "What the four states mean"
+        },
+        {
+          "id": "qmap-state-verified",
+          "label": "Verified",
+          "text": "Built, and covered by a named check you could run yourself."
+        },
+        {
+          "id": "qmap-state-partial",
+          "label": "Partial",
+          "text": "Built, but the check over it is sampled, warn-only, or incomplete."
+        },
+        {
+          "id": "qmap-state-gap",
+          "label": "Gap",
+          "text": "A known hole. No check reaches it, and the entry names the fix."
+        },
+        {
+          "id": "qmap-state-planned",
+          "label": "Planned",
+          "text": "Specced, with nothing running yet. Nothing on this map is in this state: everything here is either running or a named hole."
+        },
+        {
+          "id": "qstage-1",
+          "label": "Acquire",
+          "text": "Getting a text into the corpus from a named, published edition, with its license and provenance attached to the file."
+        },
+        {
+          "id": "qstage-2",
+          "label": "Divide",
+          "text": "Right-sizing a text into retrievable parts along the scholarly divisions rather than arbitrary character counts."
+        },
+        {
+          "id": "qstage-3",
+          "label": "Translate",
+          "text": "Making the text readable in English, or refusing to, which is the more important half."
+        },
+        {
+          "id": "qstage-4",
+          "label": "Tag",
+          "text": "Adding the metadata layers: themes, entities, speech acts, the social world, the metaphors."
+        },
+        {
+          "id": "qstage-5",
+          "label": "Lemmatise",
+          "text": "Word-level linguistics: roots and morphology, decided by a vote across independent sources."
+        },
+        {
+          "id": "qstage-6",
+          "label": "Retrieve and report",
+          "text": "What actually reaches a reader, and whether it earned the right to."
+        },
+        {
+          "id": "q-1-1",
+          "label": "Layer 0: does it parse?",
+          "text": "Proves the file parses. It says nothing at all about whether the content is right, which is the honest limit of every structural check.",
+          "note": "verified"
+        },
+        {
+          "id": "q-1-2",
+          "label": "Layer 1: does it match its schema?",
+          "text": "Only as strong as that file class’s schema. A class with a permissive schema is checked in name only.",
+          "note": "verified"
+        },
+        {
+          "id": "q-1-3",
+          "label": "The permissive-schema trap, found and closed",
+          "text": "Closed on 31 July 2026: that class is properly checked now, and a misspelled key is an error rather than a shrug. The shape of the bug is structural though, so a future file class added without its own branch could fail the same silent way, and no error count would reveal it.",
+          "note": "verified"
+        },
+        {
+          "id": "q-1-4",
+          "label": "Five works are stored twice",
+          "text": "Both copies are individually valid files, so no file-level check can possibly see it. Closing it needs a duplicate check at the level of the whole manifest, because only a whole-corpus view catches this class of error.",
+          "note": "gap"
+        },
+        {
+          "id": "q-1-5",
+          "label": "Four collection names are really two",
+          "text": "The vocabulary check confirms that a value is registered, not that two registered spellings mean the same thing. The fix is to normalise 23 straggler files and then add the merged pair to the check so it cannot recur.",
+          "note": "gap"
+        },
+        {
+          "id": "q-1-6",
+          "label": "The catalogue does not agree with itself",
+          "text": "The catalogue’s header total and the table beneath it come from the same script and are never checked against each other. Found while building this map. The fix is an assertion that fails the build when the two diverge.",
+          "note": "gap"
+        },
+        {
+          "id": "q-2-1",
+          "label": "Layer 3: is the file well structured?",
+          "text": "Warn only. A structural defect is reported and the commit proceeds anyway, which is a deliberate trade and still a weakness.",
+          "note": "partial"
+        },
+        {
+          "id": "q-3-1",
+          "label": "The 95 gate",
+          "text": "Documentary and Jewish-source classes only. Greco-Roman literary translations pass through no equivalent gate yet, which is the largest single hole in the translation stage.",
+          "note": "verified"
+        },
+        {
+          "id": "q-3-2",
+          "label": "The same gate, enforced in the data",
+          "text": "Catches a mislabelled file. It cannot judge whether the English is actually faithful; no automated check can.",
+          "note": "verified"
+        },
+        {
+          "id": "q-3-3",
+          "label": "The honest-failure bucket",
+          "text": "A judgment about legibility, not about meaning. A perfectly legible text can still be misread.",
+          "note": "verified"
+        },
+        {
+          "id": "q-3-4",
+          "label": "The Jewish layer is translating, and clearing",
+          "text": "One holdout sits at 94 on a single unattested word and is flagged rather than bluffed. That is the gate working, not the gate failing.",
+          "note": "verified"
+        },
+        {
+          "id": "q-3-5",
+          "label": "Most of the corpus has no translation yet",
+          "text": "The gate is built and self-tested, and so far it has had almost nothing to gate. Tens of thousands of documentary texts carry no English at all: about 3,150 sit in the active queue as worth translating, and the remainder are receipts, lists, and labels carrying template summaries. The translation run itself has not started, because it has a real cost attached.",
+          "note": "gap"
+        },
+        {
+          "id": "q-4-1",
+          "label": "Layer 2: controlled vocabulary",
+          "text": "Some of these warn rather than block, so a value can slip through and be corrected later.",
+          "note": "verified"
+        },
+        {
+          "id": "q-4-2",
+          "label": "Every quote must actually exist",
+          "text": "Proves the quote is really in the text it is attributed to. It does not judge whether the quote was worth citing, or whether the claim around it reads it correctly.",
+          "note": "verified"
+        },
+        {
+          "id": "q-4-3",
+          "label": "The social-world layer check",
+          "text": "Structural and vocabulary only. Whether the tagged social act is the right reading of the passage is not checked by any code, and could not be.",
+          "note": "verified"
+        },
+        {
+          "id": "q-4-4",
+          "label": "The metaphor layer check",
+          "text": "The same boundary: it confirms the tag is well formed and grounded in the text, not that the metaphor is really there.",
+          "note": "verified"
+        },
+        {
+          "id": "q-4-5",
+          "label": "Registry cross-check",
+          "text": "It reports rather than blocks, so a finding only matters if a person reads the report. Wiring it as a gate is the obvious improvement.",
+          "note": "verified"
+        },
+        {
+          "id": "q-4-6",
+          "label": "Layer 4: does the AI summary match the text?",
+          "text": "Sampled per tranche, never corpus-wide. It has run over the inscription layers and a small Second-Temple sample and found no hallucinations, at a default of 30 files per class. Most AI-written summaries in the corpus have never been checked individually.",
+          "note": "partial"
+        },
+        {
+          "id": "q-4-7",
+          "label": "A passed audit leaves no artifact behind",
+          "text": "For a project whose first value is traceability, this is the one check whose own result is not traceable: the graded manifests are gitignored, so the evidence lives in a log rather than a record. The fix is to commit them, or to write each tranche’s sample size and defect rate into a durable file.",
+          "note": "gap"
+        },
+        {
+          "id": "q-5-1",
+          "label": "A consensus vote, not a single tool",
+          "text": "Where the sources disagree, or where only one source covers a token, accuracy falls back to that single source, and the vote cannot rescue it.",
+          "note": "verified"
+        },
+        {
+          "id": "q-5-2",
+          "label": "Accuracy by stratum, stated honestly",
+          "text": "The 99% target is met on the New Testament only. Literary morphology at that level needs a trained tagger and is deliberately deferred rather than quietly assumed.",
+          "note": "partial"
+        },
+        {
+          "id": "q-6-1",
+          "label": "A report cannot ship unless it does its job",
+          "text": "Checks that claims are cited, not that each citation supports the claim it is attached to. Quote grounding is a separate check, upstream of this one.",
+          "note": "verified"
+        },
+        {
+          "id": "q-6-2",
+          "label": "Pre-registered recall gates",
+          "text": "One passage and five reader personas, measured against a hand-written expectation list. It cannot catch a gap nobody thought to pre-register, which is the category of gap that matters most.",
+          "note": "verified"
+        },
+        {
+          "id": "q-6-3",
+          "label": "The end-to-end judgment is a human read",
+          "text": "Whether a finished report is actually good is judged by a person, so unlike the other checks it does not run on every change.",
+          "note": "partial"
+        },
+        {
+          "id": "qmap-count",
+          "text": "Twenty-four components across the six stages: fifteen verified, four partial, and five gaps. Those counts come from an evidence ledger that names the script, gate, or document behind every single one, and the ledger is the load-bearing part. The canvas is trustworthy exactly as far as its ledger goes and no further."
+        },
+        {
+          "id": "qmap-gaps-title",
+          "label": "The five gaps, named"
+        },
+        {
+          "id": "qmap-gaps-p1",
+          "text": "Publishing the holes is not modesty, it is the argument. A quality-control diagram that shows only what passes is marketing; one that names what it cannot reach is something you can check. All five are listed above in their stages, and every one of them names its fix."
+        }
+      ]
+    },
+    {
       "id": "roadmap",
       "children": [
         {
@@ -438,7 +894,7 @@
         },
         {
           "id": "roadmap-p1",
-          "text": "Fast answers are the floor, not the ceiling. The goal is for experts to use this system to produce open-access dictionaries, grammars, and commentaries: drafted with AI assistance over the corpus, verified by qualified scholars, and free to translate into any language of wider communication. A pilot on Mark 1 has already produced drafts I would set beside the commercial resources I own, and every step of that work is being saved as a reusable workflow so the next drafts start better."
+          "text": "Fast answers are the floor, not the ceiling. The goal is for experts to use this system to produce open-access dictionaries, grammars, and commentaries: drafted with AI assistance over the corpus, verified by qualified scholars, and free to translate into any language of wider communication. A pilot on Mark 1 has already produced drafts I would set beside the commercial resources I own, and every step of that work is being saved as a reusable workflow so the next drafts start better. The pipeline is also content-type agnostic, and the designed second corpus is church history and the theologians, from the biblical era into the twentieth century."
         },
         {
           "id": "roadmap-step1",
@@ -471,8 +927,62 @@
           "text": "A translator listens to a passage, thinks aloud, and the assistant engages their questions with cited evidence, by voice, in their language."
         },
         {
+          "id": "roadmap-step7",
+          "label": "Specialized models (a hypothesis)",
+          "text": "Stated as a hypothesis, not a capability: models a fraction of frontier size, fine-tuned and continued-pretrained on this corpus, should approach frontier reasoning inside this one domain, because a general model spends its scale being expert in everything at once. The test is defined before the claim is: benchmarked against gold-standard corpus tasks, and nothing is offered as a capability until it clears them."
+        },
+        {
           "id": "roadmap-p2",
           "text": "At my current capacity this is months of focused building, not weeks. The sequence above matters more than any date: each layer is built and checked before the next one leans on it."
+        }
+      ]
+    },
+    {
+      "id": "teamvision",
+      "children": [
+        {
+          "id": "sc4-kicker",
+          "kicker": "What it is becoming"
+        },
+        {
+          "id": "sc4-heading",
+          "heading": "The team’s shared memory"
+        },
+        {
+          "id": "sc4-p1",
+          "text": "Here is where the road leads. A study session happens out loud: the translator talks, the system answers from the corpus, and the exchange is saved as notes tagged to the Bible verses it touched. Those notes belong to the team rather than to one laptop."
+        },
+        {
+          "id": "sc4-p2",
+          "text": "So a consultant arriving at a translation decision can see the exegetical trail behind it: the conversations, the study notes, the evidence that was actually in front of the team when they chose. Above that sits what the AI holds for the whole project, the team’s language sketch, their anthropology sketch, their translation skopos, their workflow, and their standard resources."
+        },
+        {
+          "id": "sc4-p3",
+          "text": "With those loaded it can do things generic advice cannot. It can compare this language’s typology against another’s and say which solutions have tended to work for that shape. It can spot where the receptor culture and the biblical cultures do not line up. And it can surface the deep-culture blind spots a mother-tongue translator is least likely to see coming, which is precisely the kind of gap an outside consultant used to be the only way to find."
+        },
+        {
+          "id": "sc4-beta",
+          "text": "Some of this is running already, and it is worth being exact about which part. The coaching layer is in beta today: a working coach that loads a real language sketch, an anthropological sketch, a translator profile, and a team brief carrying the team’s methodology, exegesis standard, skopos, and key-terms policy, and that answers with citations you can resolve. Study sessions are running too: a dictated reading comes back as cited engagement and is filed as verse-anchored notes. The shared team database and the voice-to-voice loop are designed and in progress, not built."
+        },
+        {
+          "id": "sc4-figure-alt",
+          "text": "Two panels compared. On the left, one person’s notes sit in a single dashed file that goes nowhere, and the reasoning behind a decision is absent from the result. On the right, three people’s sessions flow along drawn paths into a shared store keyed to verses, and from there into a filled decision card that still carries its trail, with the loaded sketches shown feeding the same store."
+        },
+        {
+          "id": "sc4-before-label",
+          "label": "One laptop, one memory"
+        },
+        {
+          "id": "sc4-before-caption",
+          "caption": "Study notes in a personal file. By the next revision the reasoning behind a decision is gone, and the next consultant starts from the text alone."
+        },
+        {
+          "id": "sc4-after-label",
+          "label": "The team’s database"
+        },
+        {
+          "id": "sc4-after-caption",
+          "caption": "Verse-tagged notes from every session, shared across the team, with the exegetical trail still attached to the decision it produced."
         }
       ]
     },
@@ -489,27 +999,27 @@
         },
         {
           "id": "needs-p1",
-          "text": "Everything above is running today on one practitioner's time and a consumer subscription's worth of AI. Four kinds of contribution would change its pace."
+          "text": "Everything above is running today on one practitioner’s time and a consumer subscription’s worth of AI. Four kinds of contribution would change its pace, and the first three are what I would ask for first."
         },
         {
           "id": "needs-1",
-          "label": "Compute for the pipeline",
-          "text": "The automated steps, tagging, translation, indexing, are throttled by AI capacity, not by design. More compute converts directly into corpus layers finished sooner."
+          "label": "Beta testers",
+          "text": "Translation teams, consultants, and scholars willing to use it while it is still rough, and to say plainly what works and what breaks. This is the need I would fill first: the design questions that matter most are the ones real use exposes and no amount of planning finds."
         },
         {
           "id": "needs-2",
-          "label": "Experts in the design loop",
-          "text": "Lexicographers, discourse linguists, and translation consultants to keep pressure-testing how the layers are defined before they harden."
+          "label": "Funding to finish the foundation",
+          "text": "The automated steps, translation, tagging, and indexing, are throttled by AI capacity rather than by design. Funding converts directly into corpus layers finished sooner, and the foundation is close enough now that finishing it is a matter of months rather than years."
         },
         {
           "id": "needs-3",
-          "label": "Experts making resources",
-          "text": "Scholars who will use the system to produce creative-commons dictionaries, grammars, and commentaries that can be translated into languages of wider communication."
+          "label": "Contributors building owned resources",
+          "text": "The resources this field most needs cannot be licensed openly, so they have to be built: commentaries, a Creative Commons Greek dictionary, and Greek and Hebrew grammars. Drafted with the corpus, verified by qualified scholars, and then free to translate into any language of wider communication."
         },
         {
           "id": "needs-4",
-          "label": "Teams willing to test",
-          "text": "Translation teams ready to try the system once it is far enough along, and to say plainly what works and what breaks."
+          "label": "Experts in the design loop",
+          "text": "Lexicographers, discourse linguists, and translation consultants to keep pressure-testing how the metadata layers are defined while they can still change. Once a layer hardens, its assumptions are expensive to revisit."
         }
       ]
     },
@@ -531,6 +1041,10 @@
         {
           "id": "model-p2",
           "text": "But the same engine answers questions far beyond translation, and the wider world already pays well for far less capable tools. The system is being designed so it could be licensed outside the Bible translation movement, to academic, publishing, and general biblical-studies markets, with proceeds funding further development and the wider work of SIL around the world. The sources themselves are openly licensed and license-tracked per file, and commercial terms would be cleared per collection before any such offering."
+        },
+        {
+          "id": "model-p3",
+          "text": "There is reason to think that lane is real rather than wishful. In every serious field, verified knowledge sustains paid subscriptions, because a wrong answer costs the reader more than the subscription does. Corpus products hold paid markets of their own that are decades old: the Thesaurus Linguae Graecae and the Loeb Classical Library have both been licensed to institutions for a generation, on far less analytical power than this. And keeping it free for Bible translation is not charity bolted onto a business. It matches how philanthropy in this ecosystem already flows, toward the translation work itself, which means revenue from the wider world is what lets the translation lane stay free without anyone being asked to fund it twice."
         }
       ]
     },

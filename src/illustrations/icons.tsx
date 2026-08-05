@@ -39,6 +39,13 @@ export function TabIcon({ route }: { route: TabRoute }) {
           <circle {...common} cx="17.5" cy="7.5" r="3" />
         </svg>
       )
+    case 'quality': // checked shield
+      return (
+        <svg viewBox="0 0 24 24" width={15} height={15} aria-hidden="true">
+          <path {...common} d="M12 3l7 2.5v6c0 4-3 7.2-7 9.5-4-2.3-7-5.5-7-9.5v-6L12 3Z" />
+          <path {...common} d="m9 11.8 2.2 2.2L15.4 9.8" />
+        </svg>
+      )
     default: // together: linked rings
       return (
         <svg viewBox="0 0 24 24" width={15} height={15} aria-hidden="true">
