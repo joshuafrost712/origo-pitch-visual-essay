@@ -29,9 +29,40 @@ const TEST_EMAIL = `origo-verify-${STAMP}@example.com`
 const HONEY_EMAIL = `origo-honeypot-${STAMP}@example.com`
 
 const results = []
+// Apps Script answers a blocked request with a full HTML page. Printing it raw
+// buries the actual verdict under a screenful of Google's CSS.
+const brief = (s) => {
+  const t = String(s ?? '').replace(/\s+/g, ' ').trim()
+  return t.length > 140 ? `${t.slice(0, 140)}…` : t
+}
 const record = (n, name, pass, detail) => {
   results.push({ n, name, pass, detail })
-  console.log(`${pass ? 'PASS' : 'FAIL'}  ${n}. ${name}${detail ? ` — ${detail}` : ''}`)
+  console.log(`${pass ? 'PASS' : 'FAIL'}  ${n}. ${name}${detail ? ` — ${brief(detail)}` : ''}`)
+}
+
+/**
+ * The failure worth naming before any other. A Workspace account can deploy a
+ * web app that looks deployed and answers only to people already signed in to
+ * that domain, which is useless for a public sign-up form. It shows up as a
+ * /a/macros/<domain>/ URL and a redirect to a sign-in page.
+ */
+const diagnoseAccess = (url, body) => {
+  const html = /<!DOCTYPE html|<html/i.test(body)
+  const login = /ServiceLogin|AccountChooser|Sign in - Google Accounts/i.test(body)
+  if (!html) return null
+  const domainScoped = /script\.google\.com\/a\/macros\//.test(url)
+  return [
+    '',
+    'DIAGNOSIS: this endpoint is not reachable by the public.',
+    login ? '  The request was redirected to a Google sign-in page.' : '  The endpoint returned an HTML page instead of a response.',
+    domainScoped
+      ? `  The URL is domain-scoped (/a/macros/...), which is the form Google issues\n  when the deployment is NOT set to "Anyone". A public deployment gets the\n  plain https://script.google.com/macros/s/.../exec form.`
+      : '  Check that the deployment exists and that this is the current /exec URL.',
+    '  Fix: Apps Script > Deploy > Manage deployments > pencil > Who has access:',
+    '  Anyone > Version: New version > Deploy. Then copy the URL again, because it',
+    '  will change, and update the VITE_SIGNUP_URL repo variable.',
+    '',
+  ].join('\n')
 }
 
 const post = async (payload) => {
@@ -57,11 +88,22 @@ const getJsonp = async (params) => {
   return { status: res.status, raw: await res.text() }
 }
 
-// 1. Liveness.
+// 1. Liveness. If this comes back as an HTML page rather than the string, every
+//    check below will fail for one reason, so say the reason once and stop.
 {
   const res = await fetch(URL_EXEC, { redirect: 'follow' })
   const text = await res.text()
-  record(1, 'liveness string', text.includes('Origo sign-up endpoint is live.'), text.trim().slice(0, 80))
+  const live = text.includes('Origo sign-up endpoint is live.')
+  record(1, 'liveness string', live, text)
+  if (!live) {
+    const why = diagnoseAccess(URL_EXEC, text)
+    if (why) {
+      console.log(why)
+      console.log('Stopping: the remaining checks cannot say anything useful until the')
+      console.log('endpoint answers. Nothing was written and nothing needs cleaning up.')
+      process.exit(1)
+    }
+  }
 }
 
 // 2. A valid sign-up with both boxes ticked.
