@@ -30,6 +30,11 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE: /origo-pitch-visual-essay/
+          # Apps Script /exec URL for the sign-up sink. Set as a repository
+          # Variable (Settings > Secrets and variables > Actions > Variables) so
+          # the endpoint is not committed. Unset resolves to empty, and the site
+          # renders its mailto invitation instead of a form that cannot work.
+          VITE_SIGNUP_URL: ${{ vars.VITE_SIGNUP_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
