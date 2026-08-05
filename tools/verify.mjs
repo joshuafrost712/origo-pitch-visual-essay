@@ -11,7 +11,7 @@ const BASE = process.env.BASE || 'http://localhost:5199'
 const OUT = join(dirname(fileURLToPath(import.meta.url)), 'raw-captures')
 mkdirSync(OUT, { recursive: true })
 
-const TABS = ['story', 'work', 'engine', 'road', 'together']
+const TABS = ['story', 'work', 'engine', 'quality', 'road', 'together']
 
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 })
