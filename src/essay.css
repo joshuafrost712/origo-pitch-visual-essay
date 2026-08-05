@@ -856,111 +856,6 @@ figcaption {
   .ms-figure.row img { height: auto; max-height: 420px; object-fit: contain; }
 }
 
-/* ------------------------------------------------------------- scroll stage */
-.scrollstage { position: relative; }
-.scrollstage-sticky {
-  position: sticky;
-  top: calc(var(--nav-h) + 14px);
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 4px;
-}
-.scrollstage-frame {
-  margin: 0;
-  background: #e8e4da;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px 10px 8px;
-  box-shadow: 0 24px 54px -22px rgba(31, 42, 55, 0.45);
-}
-.scrollstage-frame .bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 2px 4px 8px;
-}
-.scrollstage-frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #c9c2b2; }
-.scrollstage-frame .bar .zoom {
-  margin-left: auto;
-  font-family: var(--sans);
-  font-style: normal;
-  font-size: 10.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #9a917c;
-}
-.scrollstage-viewport {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  max-height: 66vh;
-  overflow: hidden;
-  border-radius: 6px;
-  background: #f4f2ec;
-}
-.scrollstage-viewport img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top left;
-  transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-.scrollstage-pin {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border-radius: 50%;
-  border: 2px solid var(--teal-bright);
-  background: rgba(127, 216, 207, 0.28);
-  box-shadow: 0 0 0 6px rgba(127, 216, 207, 0.16);
-  animation: pin-pulse 1.8s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes pin-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.9; }
-  50% { transform: scale(1.35); opacity: 0.55; }
-}
-.scrollstage-hud {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 4px 2px;
-}
-.scrollstage-hud .dots { display: inline-flex; gap: 6px; flex: none; }
-.scrollstage-hud .dots span {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: #ccc4b4; transition: background 0.3s, transform 0.3s;
-}
-.scrollstage-hud .dots span.on { background: var(--teal); transform: scale(1.25); }
-.scrollstage-hud .step-label {
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  line-height: 1.35;
-}
-.scrollstage-static { margin: 30px 0; }
-.scrollstage-static .shot-frame { cursor: default; }
-.scrollstage-steps {
-  margin: 12px 0 0;
-  padding-left: 20px;
-  font-family: var(--sans);
-  font-size: 13.5px;
-  color: var(--ink-soft);
-}
-.scrollstage-steps li { margin: 3px 0; }
-@media (prefers-reduced-motion: reduce) {
-  .scrollstage-viewport img { transition: none; }
-  .scrollstage-pin { animation: none; }
-}
-@media (max-width: 640px) {
-  .scrollstage-viewport { max-height: 54vh; }
-  .scrollstage-hud .step-label { font-size: 13px; }
-}
 
 /* --------------------------------------------------------- trust diagram */
 .trust-diagram {
@@ -984,8 +879,13 @@ figcaption {
 .td-track {
   display: flex;
   gap: 6px;
+  /* `overflow-x: auto` makes this a scroll container, and per spec that forces
+     overflow-y to auto as well, so it clips vertically too. Without room inside
+     the padding box the hover lift (-2px), the 2px selected ring and the drop
+     shadow were all sliced off at the top edge: hovering a step made its own
+     highlight disappear. The padding IS the fix; shrinking the effects is not. */
   overflow-x: auto;
-  padding-bottom: 6px;
+  padding: 8px 3px 12px;
   scrollbar-width: thin;
 }
 .td-node {

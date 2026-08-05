@@ -58,10 +58,6 @@ await page.waitForTimeout(300)
 const litAfterToggle = await page.locator('.ss-tok.hl').count()
 await page.locator('#journey3 .demo').screenshot({ path: join(OUT, 'verify-soundscape.png') })
 
-// Scroll stages present (search facets + aligned makarisms)
-const stageCount = await page.locator('.scrollstage').count()
-const stageImgs = await page.locator('.scrollstage-viewport img').count()
-
 // lightbox on the reader shot
 await page.locator('#journey1 .shot-frame').first().click()
 await page.waitForSelector('.lightbox img', { timeout: 3000 })
@@ -158,8 +154,6 @@ console.log(
       litOnLoad,
       litAfterToggle,
       ssHits,
-      stageCount,
-      stageImgs,
       lightboxShown,
       lightboxClosed,
       msLightboxShown,

@@ -3,7 +3,6 @@ import { T } from '../components/T'
 import { TabHero } from '../components/TabHero'
 import { Shot } from '../components/Shot'
 import { MsFigure } from '../components/MsFigure'
-import { ScrollStage } from '../components/ScrollStage'
 import { SearchDemo } from '../demos/SearchDemo'
 import { SoundscapeDemo } from '../demos/SoundscapeDemo'
 
@@ -13,24 +12,16 @@ import artMyrrh from '../assets/manuscripts/myrrhbearers.jpg'
 import artIcon from '../assets/manuscripts/empty-tomb-angel.jpg'
 import photoTomb from '../assets/manuscripts/jerusalem-tomb.jpg'
 import shotSearchReader from '../assets/shots/search-reader.png'
-import shotFilters from '../assets/shots/passage-hub.png'
 import shotStructure from '../assets/shots/structure-mark1.png'
-import shotStructureAligned from '../assets/shots/structure-beatitudes-aligned.png'
 
-const SEARCH_HOTSPOTS = [
-  { label: 'The real search page, before anyone types a word', x: 0.5, y: 0.36, scale: 1 },
-  { label: 'Describe what you want in plain language', x: 0.13, y: 0.28, scale: 1.9 },
-  { label: 'Or set the filters by hand: every tradition of the ancient world, in one rail', x: 0.12, y: 0.53, scale: 1.8 },
-  { label: 'Narrow it down to a range of years', x: 0.12, y: 0.75, scale: 1.9 },
-]
-
-const ALIGNED_HOTSPOTS = [
-  { label: 'The Beatitudes, as the Structure viewer lays them out', x: 0.5, y: 0.35, scale: 1 },
-  { label: 'Eight blessings, each opening with μακάριοι', x: 0.3, y: 0.62, scale: 1.6 },
-  { label: 'Named figures, judged “deliberate artistry, strongly supported”', x: 0.85, y: 0.5, scale: 1.7 },
-  { label: 'The eight members lined up column by column', x: 0.8, y: 0.97, scale: 2.1 },
-]
-
+/**
+ * The two scroll-driven zoom figures that used to sit in journeys two and three
+ * (the search facets and the aligned Beatitudes) are gone as of 2026-08-05:
+ * Joshua reported the zoom not working on either, and chose cutting the pictures
+ * over repairing the mechanism before the presentation. Their prose stands on its
+ * own, so nothing was rewritten to cover a gap. The plain lightbox `Shot` figures
+ * are unaffected and stay.
+ */
 export function WorkTab() {
   return (
     <>
@@ -63,11 +54,7 @@ export function WorkTab() {
           <MsFigure src={photoTomb} captionId="ms-tomb-caption" className="row" />
         </div>
         <div className="container" style={{ padding: 0 }}>
-          <Prose ids={['j2-p1']} />
-        </div>
-        <ScrollStage src={shotFilters} captionId="j2-caption" hotspots={SEARCH_HOTSPOTS} />
-        <div className="container" style={{ padding: 0 }}>
-          <Prose ids={['j2-payoff']} />
+          <Prose ids={['j2-p1', 'j2-payoff']} />
         </div>
       </Section>
 
@@ -78,7 +65,6 @@ export function WorkTab() {
           <Prose ids={['j3-p1']} />
         </div>
         <Shot src={shotStructure} captionId="j3-structure-caption" />
-        <ScrollStage src={shotStructureAligned} captionId="j3-structure-caption-aligned" hotspots={ALIGNED_HOTSPOTS} />
         <div className="split-figure reverse">
           <MsFigure src={msSinaiticus} captionId="ms-sinaiticus-caption" />
           <div className="container" style={{ padding: 0 }}>

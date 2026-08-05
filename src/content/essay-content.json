@@ -374,10 +374,6 @@
           "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every text in the database carries 100 to 300 lines of metadata: era, language, people, places, the actions and speech acts in a scene, and the social dynamics of every interaction, including who holds power, how close the parties are, and what is at stake. Even with only a fraction of the corpus yet tagged, that already adds up to a social map of 33,000 participants across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
         },
         {
-          "id": "j2-caption",
-          "caption": "The search page's own facets, swept end to end. Describe what you want in plain language and a local model fills in the precise filters, or set them by hand in the rail: themes, entities, speech acts, and the whole social-world layer. This is the kind of query the burial question needs."
-        },
-        {
           "id": "j2-payoff",
           "text": "When I wrote that thesis, no resource I owned could answer the burial-role question, so I set it aside, and the emotional reading of the scene stayed a notch less certain than it should have been. This is exactly the gap Origo is built to close. A corpus like this, queried across the whole ancient world in an afternoon, would have saved me hours of searching and spared the passage a real blind spot. The specialist's judgment then gets spent where it belongs: on what the evidence means."
         }
@@ -409,10 +405,6 @@
         {
           "id": "j3-structure-caption",
           "caption": "The Structure viewer on Mark 1: an epistrophe, the same word landing at the end of clause after clause, scored at 10σ and colour-graded by strength, rarer than 1 in 100,000 against the Greek New Testament itself. A run like that is the author building emphasis on purpose, exactly the shaping an oral translator will want to carry over."
-        },
-        {
-          "id": "j3-structure-caption-aligned",
-          "caption": "The Aligned view on the Beatitudes: an eight-member series at high confidence, its figures named, checked against published scholarship, and judged \"deliberate artistry, strongly supported.\""
         },
         {
           "id": "j3-demo-lead",
