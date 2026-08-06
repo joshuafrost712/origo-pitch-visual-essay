@@ -48,3 +48,12 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # The action's default timeout is 600000ms, and on 2026-08-06 three
+          # consecutive runs sat in `deployment_queued` past that and aborted,
+          # while GitHub reported Pages operational. A timed-out run also CANCELS
+          # its deployment id, and that id is derived from the commit sha, so
+          # every retry of the same sha then failed instantly against an
+          # already-cancelled deployment. Twenty minutes rides out a slow queue
+          # instead of turning it into a stuck sha.
+          timeout: 1200000
