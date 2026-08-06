@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:signup-ui": "node tools/verify-signup-ui.mjs",
+    "verify:signup": "node tools/verify-signup.mjs"
   },
   "dependencies": {
     "dexie": "^4.4.3",
