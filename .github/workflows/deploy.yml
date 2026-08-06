@@ -49,11 +49,18 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # The action's default timeout is 600000ms, and on 2026-08-06 three
-          # consecutive runs sat in `deployment_queued` past that and aborted,
-          # while GitHub reported Pages operational. A timed-out run also CANCELS
-          # its deployment id, and that id is derived from the commit sha, so
-          # every retry of the same sha then failed instantly against an
-          # already-cancelled deployment. Twenty minutes rides out a slow queue
-          # instead of turning it into a stuck sha.
+          # Raised from the 600000ms default, but be warned it did NOT help when
+          # it was tried: on 2026-08-06 five runs sat in `deployment_queued` and
+          # aborted, and the run carrying timeout: 1200000 still gave up after
+          # exactly ten minutes of polling, so something below this input caps
+          # the queued phase. Pages reported operational throughout, and the
+          # genre-research-app stalled three deployments the same day, so the
+          # cause was GitHub-side and account-wide rather than anything here.
+          #
+          # What you actually need to know when it happens: an aborted run
+          # CANCELS its deployment id, that id is the commit sha, and a cancelled
+          # sha can never be redeployed. So the recovery is
+          #   gh api -X POST repos/<owner>/<repo>/pages/deployments/<sha>/cancel
+          # followed by a NEW commit. Re-running the same sha fails instantly
+          # with "due to in progress deployment".
           timeout: 1200000
