@@ -50,7 +50,7 @@
           "id": "tab-together",
           "kicker": "The invitation",
           "heading": "Working together",
-          "text": "Interoperability with the rest of the Bible translation movement is the point of the design, not an afterthought."
+          "text": "Interoperability with the rest of the Bible translation movement is the point of the design, not an afterthought. This is also where to put your name if you want to follow the work or help test it."
         },
         {
           "id": "tab-quality",
@@ -996,7 +996,7 @@
         {
           "id": "needs-1",
           "label": "Beta testers",
-          "text": "Translation teams, consultants, and scholars willing to use it while it is still rough, and to say plainly what works and what breaks. This is the need I would fill first: the design questions that matter most are the ones real use exposes and no amount of planning finds."
+          "text": "Translation teams, consultants, and scholars willing to use it while it is still rough, and to say plainly what works and what breaks. This is the need I would fill first: the design questions that matter most are the ones real use exposes and no amount of planning finds. You can put your name down on the Working Together tab."
         },
         {
           "id": "needs-2",
@@ -1062,6 +1062,97 @@
         {
           "id": "interop-p3",
           "text": "If you build tools for Bible translation, my chief desire is that Origo makes your product better. I would rather adapt to your standards than invent competing ones."
+        }
+      ]
+    },
+    {
+      "id": "involved",
+      "children": [
+        {
+          "id": "involved-kicker",
+          "kicker": "Getting involved"
+        },
+        {
+          "id": "involved-heading",
+          "heading": "Two ways to be part of it"
+        },
+        {
+          "id": "involved-p1",
+          "text": "The bracelet I described at the start is why I would rather build this with translators than for them. If you want to follow the work, or to put it under real pressure, both start with an email address."
+        },
+        {
+          "id": "involved-updates",
+          "label": "Progress updates",
+          "text": "Every month or two I write what actually moved: which corpus layers finished, what the tools can do that they could not last time, and what broke. No marketing, and no one else gets your address."
+        },
+        {
+          "id": "involved-beta",
+          "label": "Beta testing",
+          "text": "I am not going to pretend there is a polished product waiting for you. The foundation is close, and when there is something worth an hour of a translator's time I would rather hand it to people who will say plainly what breaks. Tell me what you work on and I will come to you when your part of it is ready."
+        },
+        {
+          "id": "su-email-label",
+          "label": "Email address"
+        },
+        {
+          "id": "su-name-label",
+          "label": "Your name (optional)"
+        },
+        {
+          "id": "su-updates-label",
+          "label": "Send me progress updates"
+        },
+        {
+          "id": "su-beta-label",
+          "label": "I would like to be a beta tester"
+        },
+        {
+          "id": "su-works-label",
+          "label": "What do you work on?"
+        },
+        {
+          "id": "su-works-placeholder",
+          "label": "Language, project, or role. A line is plenty."
+        },
+        {
+          "id": "su-button",
+          "label": "Add me"
+        },
+        {
+          "id": "su-privacy",
+          "text": "Your address goes into a private sheet only I can see, and comes out again the moment you ask."
+        },
+        {
+          "id": "su-pending",
+          "text": "Adding you…"
+        },
+        {
+          "id": "su-added-updates",
+          "text": "You are on the list. I will write when there is something real to report."
+        },
+        {
+          "id": "su-added-beta",
+          "text": "You are on the list, and I have your note about what you work on. I will come to you directly when there is something worth your time."
+        },
+        {
+          "id": "su-already",
+          "text": "You were already on the list. I have updated what you asked for."
+        },
+        {
+          "id": "su-bad-email",
+          "text": "That does not look like an email address."
+        },
+        {
+          "id": "su-no-interest",
+          "text": "Tick at least one of the two so I know what to send you."
+        },
+        {
+          "id": "su-failed",
+          "text": "That did not go through. Email me at josh_frost@sil.org and I will add you by hand."
+        },
+        {
+          "id": "su-unconfigured",
+          "text": "The sign-up form is not wired up yet. Email me at josh_frost@sil.org and I will put you on the list."
         }
       ]
     },
