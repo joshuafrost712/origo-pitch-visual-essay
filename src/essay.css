@@ -1551,7 +1551,8 @@ figcaption {
 /* one hue, ordered by lightness, for the two "it is covered" states */
 .qm-state--verified { background: #0d6f66; color: #fff; border-color: #0d6f66; }
 .qm-state--partial  { background: #cfe9e5; color: #0a544d; border-color: #7fc9c1; }
-/* a gap is a different KIND of thing, not a lighter degree, so it leaves the
+/* the `gap` key is a storage id; the chip reads "Fix planned" since 2026-08-07.
+   It is a different KIND of thing from partial, not a lighter degree, so it leaves the
    ramp entirely and takes the essay's gold plus a dashed edge */
 .qm-state--gap      { background: var(--gold-bg); color: var(--gold-ink); border-color: var(--gold-border); border-style: dashed; }
 .qm-state--planned  { background: var(--parchment-deep); color: var(--ink-muted); border-color: #c3bcab; border-style: dashed; }

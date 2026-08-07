@@ -15,8 +15,9 @@ import msPoxy from '../assets/manuscripts/poxy5100-letter.jpg'
  * The `trust` section moved here off the Engine tab so the whole QA argument
  * reads as one thing: the ladder of guarantees, then the six-step walk-through
  * of a single text, then the map of every check with its boundary and the five
- * holes named. The honesty is the credibility argument; a filtered version of
- * this page would be worth less than no page.
+ * errors named, each with a scheduled fix behind it. The honesty is the
+ * credibility argument; a filtered version of this page would be worth less than
+ * no page.
  */
 export function QualityTab() {
   return (

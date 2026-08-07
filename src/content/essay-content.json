@@ -659,7 +659,7 @@
         },
         {
           "id": "qmap-p2",
-          "text": "A diagram is a persuasive object, and a green box labelled “quality control” drawn over a check that is sampled, warn-only, or unwritten will be believed. So each component below carries its state, and the known holes are named on the page rather than filtered off it. Click any component to read what its check proves and where it stops."
+          "text": "A diagram is a persuasive object, and a green box labelled “quality control” drawn over a check that is sampled, warn-only, or unwritten will be believed. So each component below carries its state, and the known errors are named on the page rather than filtered off it. Click any component to read what its check proves and where it stops."
         },
         {
           "id": "qmap-legend-title",
@@ -677,13 +677,13 @@
         },
         {
           "id": "qmap-state-gap",
-          "label": "Gap",
-          "text": "A known hole. No check reaches it, and the entry names the fix."
+          "label": "Fix planned",
+          "text": "A known error or hole. No check reaches it yet, and the entry names both the fix and the scheduled piece of work that carries it."
         },
         {
           "id": "qmap-state-planned",
           "label": "Planned",
-          "text": "Specced, with nothing running yet. Nothing on this map is in this state: everything here is either running or a named hole."
+          "text": "A check that is specced but not yet running. Nothing on this map is in this state: everything here is either running or a named error with a scheduled fix."
         },
         {
           "id": "qstage-1",
@@ -861,15 +861,15 @@
         },
         {
           "id": "qmap-count",
-          "text": "Twenty-four components across the six stages: fifteen verified, four partial, and five gaps. Those counts come from an evidence ledger that names the script, gate, or document behind every single one, and the ledger is the load-bearing part. The canvas is trustworthy exactly as far as its ledger goes and no further."
+          "text": "Twenty-four components across the six stages: fifteen verified, four partial, and five errors with a fix planned. Those counts come from an evidence ledger that names the script, gate, or document behind every single one, and the ledger is the load-bearing part. The canvas is trustworthy exactly as far as its ledger goes and no further."
         },
         {
           "id": "qmap-gaps-title",
-          "label": "The five gaps, named"
+          "label": "The five errors, and the plan for each"
         },
         {
           "id": "qmap-gaps-p1",
-          "text": "Publishing the holes is not modesty, it is the argument. A quality-control diagram that shows only what passes is marketing; one that names what it cannot reach is something you can check. All five are listed above in their stages, and every one of them names its fix."
+          "text": "Publishing the errors is not modesty, it is the argument. A quality-control diagram that shows only what passes is marketing; one that names what it cannot reach is something you can check. All five are listed above in their stages, each names its fix, and as of August 2026 each fix is a scheduled item on the project’s launch plan rather than an intention. That is the second half of the promise: a named error is not allowed to sit on this map as a permanent feature."
         }
       ]
     },

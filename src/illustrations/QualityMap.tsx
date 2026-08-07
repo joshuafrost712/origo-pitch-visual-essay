@@ -15,6 +15,13 @@ import { findNode } from '../lib/content/loader'
  * outline, which means "no check reaches this" exactly as the dashed chips in
  * the vision scenes mean "not a real record". That redundancy is what makes the
  * map readable to a colourblind reader and to a printer.
+ *
+ * The `gap` key is a storage id and never changes: the content nodes' `note`
+ * fields, the CSS classes, and the vault-side spec YAML all address it by that
+ * name. Its DISPLAYED word moved from "Gap" to "Fix planned" on 2026-08-07, once
+ * every one of the five became a scheduled row on the launch plan, because a hole
+ * with a scheduled fix behind it is a different claim from a hole with an opinion
+ * behind it. The same rename landed vault-side in `canvas_gen.py`.
  */
 
 const STATES = ['verified', 'partial', 'gap', 'planned'] as const
@@ -40,7 +47,7 @@ const GLYPH: Record<State, string> = { verified: '✓', partial: '◐', gap: '�
 const WORD: Record<State, string> = {
   verified: 'Verified',
   partial: 'Partial',
-  gap: 'Gap',
+  gap: 'Fix planned',
   planned: 'Planned',
 }
 
@@ -75,7 +82,9 @@ function Component({ id }: { id: string }) {
       {open && (
         <div className="qm-comp__body">
           <span className="qm-comp__body-kicker">
-            {state === 'gap' ? 'The hole, and the fix' : 'What this check does not reach'}
+            {state === 'gap'
+              ? 'The problem, and the planned fix'
+              : 'What this check does not reach'}
           </span>
           <T id={id} field="text" as="p" />
         </div>
