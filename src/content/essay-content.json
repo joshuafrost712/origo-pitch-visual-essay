@@ -338,7 +338,7 @@
         },
         {
           "id": "j1-demo-caption",
-          "caption": "Interactive: a lemma search, exactly as the app renders it. Click a result to open the aligned reader."
+          "caption": "Interactive: a lemma search, exactly as the app renders it. Click a result to open the parallel reader."
         },
         {
           "id": "j1-reader-caption",
@@ -513,7 +513,7 @@
         },
         {
           "id": "state-now-3",
-          "label": "The aligned reader",
+          "label": "The parallel reader",
           "text": "Original language and English side by side, aligned to the scholarly divisions, with search hits carried through into the text."
         },
         {
