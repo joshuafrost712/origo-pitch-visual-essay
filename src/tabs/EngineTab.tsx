@@ -9,6 +9,7 @@ import { findNode } from '../lib/content/loader'
 import msIsaiah from '../assets/manuscripts/isaiah-scroll.jpg'
 import shotWorkspace from '../assets/shots/app-workspace.png'
 import shotCommentaries from '../assets/shots/commentaries-landing.png'
+import shotCatalogue from '../assets/shots/catalogue-find.png'
 
 const STATS: Array<{ id: string; approx?: boolean }> = [
   { id: 'engine-stat-files' },
@@ -80,6 +81,9 @@ export function EngineTab() {
         <div className="shot-pair">
           <Shot src={shotWorkspace} captionId="engine-workspace-caption" />
           <Shot src={shotCommentaries} captionId="engine-commentaries-caption" />
+        </div>
+        <div className="container" style={{ padding: 0, marginTop: 24 }}>
+          <Shot src={shotCatalogue} captionId="engine-catalogue-caption" />
         </div>
       </Section>
 

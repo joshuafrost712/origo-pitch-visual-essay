@@ -475,6 +475,10 @@
         {
           "id": "engine-commentaries-caption",
           "caption": "The commentaries portal: your own library, indexed locally, searched by a free local model. Nothing leaves your machine."
+        },
+        {
+          "id": "engine-catalogue-caption",
+          "caption": "The corpus catalogue: every work title across the collections, searchable by name. Each entry links to the text itself, and the page is regenerated whenever the index is rebuilt."
         }
       ]
     },
