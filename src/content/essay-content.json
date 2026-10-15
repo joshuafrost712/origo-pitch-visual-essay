@@ -371,7 +371,7 @@
         },
         {
           "id": "j2-p1",
-          "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every text in the database carries structured metadata: era, language, people, places, the actions and speech acts in a scene, and the social dynamics of every interaction, including who holds power, how close the parties are, and what is at stake. Even with only a fraction of the corpus yet tagged, that already adds up to a social map of 33,000 participants across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
+          "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every file carries structured metadata, and a growing set, about 7,200 files so far and mostly biblical, Jewish and ancient Near Eastern, also records the actions and speech acts in each scene and the social dynamics of each interaction: who holds power, how close the parties are, and what is at stake. Even with only that fraction of the corpus tagged, it already adds up to a social map of 33,000 participant records across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
         },
         {
           "id": "j2-payoff",
@@ -533,7 +533,7 @@
         {
           "id": "state-rest-1",
           "label": "Translations",
-          "text": "About 3,150 texts are still in the queue for an English translation, 1,317 of them Greco-Roman literary works. Below the confidence gate a text is marked untranslated rather than guessed, which is the right behaviour and also why the queue is long."
+          "text": "About 194,900 Greek literature files are still waiting for an English translation, against 9,616 done (October 2026). Translating the Greek is the first step of the funded plan, and it waits on a stricter accuracy check now being built. Below the confidence gate a text is marked untranslated rather than guessed, which is the right behaviour and also why the queue is long."
         },
         {
           "id": "state-rest-2",
@@ -788,7 +788,7 @@
         {
           "id": "q-3-5",
           "label": "Most of the corpus has no translation yet",
-          "text": "The gate is built and self-tested, and so far it has had almost nothing to gate. Tens of thousands of documentary texts carry no English at all: about 3,150 sit in the active queue as worth translating, and the remainder are receipts, lists, and labels carrying template summaries. The translation run itself has not started, because it has a real cost attached.",
+          "text": "The gate is built and self-tested, and so far it has had almost nothing to gate. Most of the corpus carries no English yet: of 460,728 files, about 57,000 hold some English (October 2026). The largest untranslated block is the Greek literature, about 195,000 files, and it is the first translation run to fund; the documentary receipts, lists, and labels carry template summaries. The large translation run has not started, because it waits on stricter accuracy checks and has a real cost attached.",
           "note": "gap"
         },
         {
