@@ -438,22 +438,22 @@
         {
           "id": "engine-stat-files",
           "label": "indexed files",
-          "note": "80036"
+          "note": "460728"
         },
         {
           "id": "engine-stat-collections",
           "label": "collections",
-          "note": "116"
+          "note": "122"
         },
         {
           "id": "engine-stat-works",
-          "label": "distinct works",
-          "note": "45746"
+          "label": "catalogued works and texts",
+          "note": "191698"
         },
         {
           "id": "engine-stat-tokens",
           "label": "tokens of non-biblical Greek, lemma-searchable",
-          "note": "12159873"
+          "note": "11517463"
         },
         {
           "id": "engine-stat-links",
@@ -600,7 +600,7 @@
         },
         {
           "id": "trust-p2",
-          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold, and that number is not a figure the model invents about itself: it is scored against defined criteria. For a documentary text, for instance, the core elements of the transaction, who the parties are and what changed hands, must both be fully present and none may be lost, and a high self-assessment is overridden when the criteria contradict it. That is a stricter bar than we ask of most human translators. Below the line, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing, and where a baseline is still provisional, the interface says so on screen. Above the individual checks sits a five-layer validator that runs on every change, and the corpus currently stands at zero schema or parse errors across all 80,036 files."
+          "text": "The same discipline applies below the surface. Machine translations enter the corpus only above a 95% confidence threshold, and that number is not a figure the model invents about itself: it is scored against defined criteria. For a documentary text, for instance, the core elements of the transaction, who the parties are and what changed hands, must both be fully present and none may be lost, and a high self-assessment is overridden when the criteria contradict it. That is a stricter bar than we ask of most human translators. Below the line, a text is marked untranslated rather than guessed. Rarity claims in the artistry tools name their reference class and are corrected for multiple testing, and where a baseline is still provisional, the interface says so on screen. Above the individual checks sits a five-layer validator that runs on every change, and the corpus currently stands at zero schema or parse errors across all 468,226 files."
         },
         {
           "id": "trust-caption",
