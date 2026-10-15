@@ -120,7 +120,7 @@
         },
         {
           "id": "pipeline-s4",
-          "label": "100 to 300 lines of metadata"
+          "label": "Structured metadata"
         },
         {
           "id": "pipeline-s5",
@@ -371,7 +371,7 @@
         },
         {
           "id": "j2-p1",
-          "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every text in the database carries 100 to 300 lines of metadata: era, language, people, places, the actions and speech acts in a scene, and the social dynamics of every interaction, including who holds power, how close the parties are, and what is at stake. Even with only a fraction of the corpus yet tagged, that already adds up to a social map of 33,000 participants across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
+          "text": "No concordance can ask that, because a concordance indexes words, not who does what to whom. Origo can, because every text in the database carries structured metadata: era, language, people, places, the actions and speech acts in a scene, and the social dynamics of every interaction, including who holds power, how close the parties are, and what is at stake. Even with only a fraction of the corpus yet tagged, that already adds up to a social map of 33,000 participants across 23,000 interactions, the kind of map that can surface every scene in the ancient world where a body is prepared for burial, and who performs it."
         },
         {
           "id": "j2-payoff",
@@ -462,7 +462,7 @@
         },
         {
           "id": "engine-p2",
-          "text": "Each text moves through one pipeline: an interlinear with morphology and roots identified, a literal English translation aligned to the scholarly divisions, 100 to 300 lines of metadata, and a vector index for semantic search. The result is a corpus that people and AI agents can query with the same precision, and every answer traces back to a source line."
+          "text": "Each text moves through one pipeline: an interlinear with morphology and roots identified, a literal English translation aligned to the scholarly divisions, structured metadata, and a vector index for semantic search. The result is a corpus that people and AI agents can query with the same precision, and every answer traces back to a source line."
         },
         {
           "id": "engine-p3",
