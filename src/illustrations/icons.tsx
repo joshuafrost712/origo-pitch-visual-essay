@@ -46,6 +46,13 @@ export function TabIcon({ route }: { route: TabRoute }) {
           <path {...common} d="m9 11.8 2.2 2.2L15.4 9.8" />
         </svg>
       )
+    case 'recommendations': // quotation mark in a speech bubble
+      return (
+        <svg viewBox="0 0 24 24" width={15} height={15} aria-hidden="true">
+          <path {...common} d="M4 5h16v11H9l-5 4V5Z" />
+          <path {...common} d="M9 9.5v2.5M13.5 9.5v2.5" />
+        </svg>
+      )
     default: // together: linked rings
       return (
         <svg viewBox="0 0 24 24" width={15} height={15} aria-hidden="true">

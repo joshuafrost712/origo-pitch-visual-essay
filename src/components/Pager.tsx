@@ -1,10 +1,11 @@
-import { TABS, hashFor, type TabRoute } from '../lib/router'
+import { NAV_TABS as TABS, hashFor, type TabRoute } from '../lib/router'
 import { T } from './T'
 
 /** Prev/next links at the foot of each tab so the essay still reads
  *  front-to-back as one guided flow. */
 export function Pager({ route }: { route: TabRoute }) {
   const i = TABS.findIndex((t) => t.route === route)
+  if (i === -1) return null // unlisted tabs sit outside the guided flow
   const prev = i > 0 ? TABS[i - 1] : null
   const next = i < TABS.length - 1 ? TABS[i + 1] : null
   return (

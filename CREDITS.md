@@ -20,3 +20,11 @@ reproduces the downloads.
 UI screenshots in `src/assets/shots/` are captures of the Origo research
 application itself (see `tools/capture.mjs`); demo JSON in `src/demos/` is
 frozen output of its live APIs.
+
+## Recommendation headshots
+
+- Marcia Suzuki: cropped from the portrait on Shema Bible Translation's About page, https://www.shemaywam.com/about (image https://static.wixstatic.com/media/c93b81_d748c4fe50ec408299ba9f0a367bc4e6~mv2.png). Used with her consent for Origo's donor pitches.
+
+## Fonts
+
+- Lora, Playfair Display and Source Sans 3 (SIL Open Font License 1.1), self-hosted from the copies in obt-cdt-site (`scripts/fetch-fonts.mjs` there), following SIL Global's website type.

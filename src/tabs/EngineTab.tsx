@@ -17,6 +17,7 @@ const STATS: Array<{ id: string; approx?: boolean }> = [
   { id: 'engine-stat-works' },
   { id: 'engine-stat-tokens', approx: true },
   { id: 'engine-stat-links' },
+  { id: 'engine-stat-languages' },
 ]
 
 const NOW = ['state-now-1', 'state-now-2', 'state-now-3', 'state-now-4', 'state-now-5']
@@ -71,6 +72,7 @@ export function EngineTab() {
             )
           })}
         </div>
+        <T id="engine-stat-asof" field="text" as="p" className="stats-asof" />
         <div className="container" style={{ padding: 0 }}>
           <Prose ids={['engine-p2']} />
         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { TABS, hashFor, type TabRoute } from '../lib/router'
+import { NAV_TABS as TABS, hashFor, type TabRoute } from '../lib/router'
 import { TabIcon } from '../illustrations/icons'
 import { T } from './T'
 

@@ -12,3 +12,6 @@ tools/raw-captures/
 
 # OS noise
 .DS_Store
+
+# Headshot candidates: full-size third-party photos, kept local; only the chosen crop ships from public/recommendations/
+tools/headshot-candidates/

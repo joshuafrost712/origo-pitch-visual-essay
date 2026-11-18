@@ -8,6 +8,7 @@ import { EngineTab } from './tabs/EngineTab'
 import { QualityTab } from './tabs/QualityTab'
 import { RoadTab } from './tabs/RoadTab'
 import { TogetherTab } from './tabs/TogetherTab'
+import { RecommendationsTab } from './tabs/RecommendationsTab'
 
 /**
  * The dev-feedback tools are kept OUT of the production bundle entirely, not
@@ -33,6 +34,7 @@ const TAB_VIEWS: Record<TabRoute, () => React.ReactNode> = {
   engine: EngineTab,
   quality: QualityTab,
   road: RoadTab,
+  recommendations: RecommendationsTab,
   together: TogetherTab,
 }
 

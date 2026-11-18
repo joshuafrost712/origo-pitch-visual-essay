@@ -21,6 +21,10 @@
           "label": "The Road Ahead"
         },
         {
+          "id": "nav-recommendations",
+          "label": "Recommendations"
+        },
+        {
           "id": "nav-together",
           "label": "Working Together"
         },
@@ -32,7 +36,7 @@
           "id": "tab-work",
           "kicker": "Three journeys",
           "heading": "See it work",
-          "text": "Three real research problems, each taken from question to cited answer: a word study that decided a translation, a query no concordance can ask, and the artistry of the text made visible."
+          "text": "Three real research problems, each taken from question to cited answer: a word study that changed how a Bible translation renders “witness”, a query no concordance can ask, and the artistry of the text made visible."
         },
         {
           "id": "tab-engine",
@@ -44,7 +48,13 @@
           "id": "tab-road",
           "kicker": "Trajectory",
           "heading": "The road ahead",
-          "text": "Where this is heading, the four contributions that would move it faster, and how it stays free for the people it is for."
+          "text": "Four stages from intellectual integrity to global accessibility, the technical steps that build them, the four contributions that would move it faster, and how it stays free for the people it is for."
+        },
+        {
+          "id": "tab-recommendations",
+          "kicker": "In their words",
+          "heading": "Recommendations",
+          "text": "Leaders in Bible translation who know the work, on why it matters. More are being added as they arrive."
         },
         {
           "id": "tab-together",
@@ -244,7 +254,7 @@
         },
         {
           "id": "sc2-p3",
-          "text": "This is not hypothetical. One key-term study run exactly this way went from roughly five to twenty hours of specialist work down to about one, and its evidence changed a real translation decision across a whole New Testament. See It Work tells that story in full."
+          "text": "This is not hypothetical. One key-term study run exactly this way took under an hour, against about twenty hours for a colleague working by hand in the standard dictionaries, and its evidence changed a real translation decision across a whole New Testament. See It Work tells that story in full."
         },
         {
           "id": "sc2-figure-alt",
@@ -256,7 +266,7 @@
         },
         {
           "id": "sc2-before-caption",
-          "caption": "Five to twenty hours of collecting before the thinking can start, and often the hours run out before it does."
+          "caption": "Many hours of collecting before the thinking can start, and often the hours run out before it does."
         },
         {
           "id": "sc2-after-label",
@@ -264,7 +274,7 @@
         },
         {
           "id": "sc2-after-caption",
-          "caption": "About an hour to organised, cited evidence, with every source still in front of you to read and to disagree with."
+          "caption": "Under an hour to organised, cited evidence, with every source still in front of you to read and to disagree with."
         }
       ]
     },
@@ -346,7 +356,7 @@
         },
         {
           "id": "j1-payoff",
-          "text": "I ran this study for real, for the Spoken English Bible's key-terms work. From question to evidence to write-up took about an hour. Done by hand, the same study takes me 5 to 20 hours, and this one's conclusions changed a real translation decision. That is the promise in miniature: not different answers, but the same careful answers at a speed a translation schedule can afford."
+          "text": "I ran this study for real, for a key-terms meeting of the Spoken English Bible. A colleague researched the same word group by hand in the standard dictionaries, which took about twenty hours. With Origo, question to evidence to write-up took under an hour, about 5% of the time, and it turned up evidence the dictionaries had missed. The word's natural home is the lawcourt: accountable public testimony. The New Testament uses the witness word group at about three times the rate of other ancient Greek literature, most heavily in John, where it echoes the divine courtroom of Isaiah 40 to 55 (“you are my witnesses”). The colleague's study served as the cross-check, and the team changed how it translates the “witness” word group across its New Testament. That is the promise in miniature: not different answers, but the same careful answers at a speed a translation schedule can afford."
         }
       ]
     },
@@ -438,27 +448,36 @@
         {
           "id": "engine-stat-files",
           "label": "indexed files",
-          "note": "460728"
+          "note": "470249"
         },
         {
           "id": "engine-stat-collections",
           "label": "collections",
-          "note": "122"
+          "note": "124"
         },
         {
           "id": "engine-stat-works",
-          "label": "catalogued works and texts",
-          "note": "191698"
+          "label": "catalogue entries for works and documents",
+          "note": "196626"
         },
         {
           "id": "engine-stat-tokens",
           "label": "tokens of non-biblical Greek, lemma-searchable",
-          "note": "11517463"
+          "note": "12401037"
         },
         {
           "id": "engine-stat-links",
           "label": "typed links between texts",
           "note": "69355"
+        },
+        {
+          "id": "engine-stat-languages",
+          "label": "ancient languages",
+          "note": "29"
+        },
+        {
+          "id": "engine-stat-asof",
+          "text": "Read on 18 November 2026 from the corpus catalogue (built 16 November), the Greek token index, and the New Testament to Old Testament link index."
         },
         {
           "id": "engine-p2",
@@ -533,7 +552,7 @@
         {
           "id": "state-rest-1",
           "label": "Translations",
-          "text": "About 194,900 Greek literature files are still waiting for an English translation, against 9,616 done (October 2026). Translating the Greek is the first step of the funded plan, and it waits on a stricter accuracy check now being built. Below the confidence gate a text is marked untranslated rather than guessed, which is the right behaviour and also why the queue is long."
+          "text": "About 197,000 Greek literature files are still waiting for an English translation, against 10,639 done (November 2026). Translating the Greek is the first step of the funded plan, and it waits on a stricter accuracy check now being built. Below the confidence gate a text is marked untranslated rather than guessed, which is the right behaviour and also why the queue is long."
         },
         {
           "id": "state-rest-2",
@@ -788,7 +807,7 @@
         {
           "id": "q-3-5",
           "label": "Most of the corpus has no translation yet",
-          "text": "The gate is built and self-tested, and so far it has had almost nothing to gate. Most of the corpus carries no English yet: of 460,728 files, about 57,000 hold some English (October 2026). The largest untranslated block is the Greek literature, about 195,000 files, and it is the first translation run to fund; the documentary receipts, lists, and labels carry template summaries. The large translation run has not started, because it waits on stricter accuracy checks and has a real cost attached.",
+          "text": "The gate is built and self-tested, and so far it has had almost nothing to gate. Most of the corpus carries no English yet: of roughly 470,000 files, about 60,000 hold some English (November 2026). The largest untranslated block is the Greek literature, about 197,000 files, and it is the first translation run to fund; the documentary receipts, lists, and labels carry template summaries. The large translation run has not started, because it waits on stricter accuracy checks and has a real cost attached.",
           "note": "gap"
         },
         {
@@ -878,11 +897,56 @@
       ]
     },
     {
+      "id": "vision",
+      "children": [
+        {
+          "id": "vision-kicker",
+          "kicker": "The vision"
+        },
+        {
+          "id": "vision-heading",
+          "heading": "From intellectual integrity to global accessibility"
+        },
+        {
+          "id": "vision-p1",
+          "text": "Origo's vision is global. It starts by building a foundation that holds up to the best of biblical scholarship, and it moves, stage by stage, toward putting that foundation in the hands of every translator, pastor, and Bible study leader who needs it, in a language they understand. Each stage has a first completion point, and refinement continues after it."
+        },
+        {
+          "id": "vision-stage1",
+          "kicker": "Stage 1 · close",
+          "label": "A rigorous foundation",
+          "text": "Complete a core set of the Greek corpus that meets our standards: texts, translations, and metadata we are glad to stand behind. Reaching that standard once, with validated processes, is what lets the rest of the corpus scale without lowering it. This is also the point at which Origo goes live as a subscription product.",
+          "caption": "We will know we are there when Origo passes our internal testing. We are close."
+        },
+        {
+          "id": "vision-stage2",
+          "kicker": "Stage 2",
+          "label": "A library and open resources",
+          "text": "Acquire a core library that represents the best of biblical studies, and use it with the corpus to make the openly licensed (Creative Commons) resources that interpretation and translation need. First comes a Greek lexicon, starting with the words of the New Testament. Following standard lexical-semantic procedure, AI works out each word's senses from the ancient texts themselves, checks them against the standard dictionaries, presents them the way current lexical semantics defines and distinguishes meanings, and links every sense to real examples in the corpus. Next comes a Bible backgrounds resource, the cultural knowledge needed to interpret the biblical texts: AI and human experts draw on the best of the existing background scholarship to write it openly, linked to the original sources so readers can check them. A general Bible encyclopedia follows, made the same way.",
+          "caption": "We will know the first step is done when an openly licensed New Testament Greek lexicon, linked to the corpus, is published."
+        },
+        {
+          "id": "vision-stage3",
+          "kicker": "Stage 3",
+          "label": "In mother-tongue translators’ hands",
+          "text": "The resources move beyond consultants into the everyday work of mother-tongue translators. That means bringing them into Paratext, into the AI translation workflows of Marcia Suzuki’s OBT Lab, and into oral translation recording and drafting software and other translation platforms, through direct connections where a platform supports them. Some of this is partly available already.",
+          "caption": "We will know it is working when translators reach these resources from inside the tools they already use."
+        },
+        {
+          "id": "vision-stage4",
+          "kicker": "Stage 4",
+          "label": "For pastors and Bible study leaders",
+          "text": "Finally, Origo and what it produces become usable by pastors and lay people. The resources are translated into many languages of wider communication and offered where people already study the Bible: on major Bible study websites and Bible apps, and possibly in an app designed for pastors and Bible study leaders.",
+          "caption": "We will know it has arrived when a pastor can open a trustworthy word study or cultural background in their own language of wider communication, on a platform they already use."
+        }
+      ]
+    },
+    {
       "id": "roadmap",
       "children": [
         {
           "id": "roadmap-kicker",
-          "kicker": "Where this is heading"
+          "kicker": "How we get there: the steps beneath stages 1 and 2"
         },
         {
           "id": "roadmap-heading",
