@@ -2017,3 +2017,6 @@ figcaption {
   .rec-grid { grid-template-columns: 1fr; }
   .rec-full__who { flex-direction: column; align-items: flex-start; }
 }
+
+.rec-links { margin: 1.25rem 0 0; font-size: 0.95rem; }
+.rec-links a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

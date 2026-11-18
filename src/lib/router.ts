@@ -11,7 +11,7 @@ export const TABS = [
   { route: 'engine', navId: 'nav-engine' },
   { route: 'quality', navId: 'nav-quality' },
   { route: 'road', navId: 'nav-road' },
-  { route: 'recommendations', navId: 'nav-recommendations', listed: false },
+  { route: 'recommendations', navId: 'nav-recommendations' },
   { route: 'together', navId: 'nav-together' },
 ] as const
 

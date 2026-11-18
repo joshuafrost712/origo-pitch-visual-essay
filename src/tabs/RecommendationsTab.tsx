@@ -22,6 +22,7 @@ export interface Recommendation {
   date: string
   snippet: string
   full: string[]
+  links?: { label: string; url: string }[]
 }
 
 const RECS = (data as { recommendations: Recommendation[] }).recommendations
@@ -95,6 +96,19 @@ function Full({ rec }: { rec: Recommendation }) {
           <p className="rec-date">{monthYear(rec.date)}</p>
         </div>
       </header>
+      {rec.links && rec.links.length > 0 && (
+        <p className="rec-links">
+          View their website:{' '}
+          {rec.links.map((l, i) => (
+            <span key={l.url}>
+              {i > 0 && ' · '}
+              <a href={l.url} target="_blank" rel="noopener noreferrer">
+                {l.label} ↗
+              </a>
+            </span>
+          ))}
+        </p>
+      )}
       <div className="rec-letter">
         {rec.full.map((p, i) => (
           <p key={i}>{p}</p>
