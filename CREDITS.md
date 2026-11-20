@@ -24,6 +24,8 @@ frozen output of its live APIs.
 ## Recommendation headshots
 
 - Marcia Suzuki: cropped from the portrait on Shema Bible Translation's About page, https://www.shemaywam.com/about (image https://static.wixstatic.com/media/c93b81_d748c4fe50ec408299ba9f0a367bc4e6~mv2.png). Used with her consent for Origo's donor pitches.
+- Reinier de Blois: cropped from the portrait on the Nida Institute for Biblical Scholarship site, https://nida-institute.org/images/reinier.png (supplied by Joshua).
+- Elizabeth Robar: cropped from the leadership portrait on Scriptura's About page, https://www.scriptura.org/about-us/#leadership (image https://www.scriptura.org/wp-content/uploads/2025/01/Elizabeth_Robar.jpg, credited there to Douglas Robar Photography).
 
 ## Fonts
 

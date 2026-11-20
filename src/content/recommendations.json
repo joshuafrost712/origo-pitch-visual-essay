@@ -50,6 +50,48 @@
           "url": "https://www.faithcomesbyhearing.com/"
         }
       ]
+    },
+    {
+      "id": "reinier-de-blois",
+      "name": "Reinier de Blois",
+      "title": "Director, Nida Institute for Biblical Scholarship",
+      "org": "United Bible Societies",
+      "photo": "reinier-de-blois.jpg",
+      "photoCredit": "Nida Institute for Biblical Scholarship (nida-institute.org)",
+      "date": "2026-11-20",
+      "snippet": "I believe one of the most important steps is to give translators easy access to reliable resources that help them answer the questions they face in their work. I believe Origo can be that kind of resource, and I look forward to making it available to Bible translation teams around the world.",
+      "full": [
+        "Many people today are asking how we can translate the Bible into every language that still needs it without unnecessary delays. How can we use technology, including AI, to help translation teams work faster and do so responsibly?",
+        "I believe one of the most important steps is to give translators easy access to reliable resources that help them answer the questions they face in their work. I believe Origo can be that kind of resource, and I look forward to making it available to Bible translation teams around the world."
+      ],
+      "links": [
+        {
+          "label": "Nida Institute for Biblical Scholarship",
+          "url": "https://nida-institute.org/"
+        }
+      ]
+    },
+    {
+      "id": "elizabeth-robar",
+      "name": "Elizabeth Robar",
+      "title": "Founder & CEO, Scriptura",
+      "org": "",
+      "photo": "elizabeth-robar.jpg",
+      "photoCredit": "Douglas Robar Photography, via scriptura.org",
+      "date": "2026-11-20",
+      "snippet": "AI on its own is a wildcard and calls for caution. But AI harnessed in a tool like Origo could greatly accelerate the work of scholars like those at Scriptura, and it could equip translation teams to truly understand the text and bring God’s Word to life for every tribe and language and people and nation.",
+      "full": [
+        "After 2,000 years of scholarship, one might think we understand the Bible thoroughly. We don’t. Each generation must wrestle afresh with what God is saying to his people, drawing on the accumulated wisdom of the ages. Without that wrestling, we lose sight of the gospel and drift into cultural patterns far from God’s intentions.",
+        "Familiarity can fool us into thinking we understand. Where the Bible is being translated for the first time, there is no such illusion: translation teams see at once where the text is confusing, and they know their hope of knowing God depends on understanding his Word. Yet the materials they need are scarce, either not freely available or written in academic jargon they cannot penetrate.",
+        "Meeting that need takes two kinds of expertise: scholars who can research the text, and writers who can explain it clearly to translators. (We scholars rarely manage both!) Until recently, that work has been slow and labor-intensive. Now AI, serving as the handmaiden of scholars, can collect ancient sources, collate and summarize them, surface patterns, and help produce simpler resources in many languages, always under expert review.",
+        "AI on its own is a wildcard and calls for caution. But AI harnessed in a tool like Origo could greatly accelerate the work of scholars like those at Scriptura, and it could equip translation teams to truly understand the text and bring God’s Word to life for every tribe and language and people and nation. That's what the church has long been praying for."
+      ],
+      "links": [
+        {
+          "label": "Scriptura leadership page",
+          "url": "https://www.scriptura.org/about-us/#leadership"
+        }
+      ]
     }
   ]
 }
