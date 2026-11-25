@@ -1,0 +1,7 @@
+*deleting   old.html
+*deleting   assets/index-OLD.js
+<f+++++++++ assets/index-NEW.js
+cd+++++++++ assets/
+.d..t...... ./
+<f..t...... index.html
+<f+++++++++ .htaccess

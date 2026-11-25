@@ -1,0 +1,1 @@
+protected path in delete plan: preview/index.html

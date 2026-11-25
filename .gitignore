@@ -15,3 +15,10 @@ tools/raw-captures/
 
 # Headshot candidates: full-size third-party photos, kept local; only the chosen crop ships from public/recommendations/
 tools/headshot-candidates/
+
+# Origo site runtime (mutant worktrees, drafts, local deploy state): local only, never committed
+.origo-site-runtime/
+.deploy-state/
+
+# Screenshots for W specs
+feedback/*-shots/

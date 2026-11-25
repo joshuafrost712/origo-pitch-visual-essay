@@ -7,6 +7,23 @@ import react from '@vitejs/plugin-react'
 // GitHub Project Pages. Set VITE_BASE at build time.
 const base = process.env.VITE_BASE || '/'
 
+// Origo site W-00 D3. The commit marker in index.html reads %VITE_COMMIT%; Vite leaves an
+// undefined placeholder as literal text, so a local build gets "local" (tools/check-dist.mjs
+// accepts it only with --local). The deploy workflow sets VITE_COMMIT to the pushed sha.
+if (!process.env.VITE_COMMIT) process.env.VITE_COMMIT = 'local'
+
+// Origo site W-00 D3: preview builds (VITE_NOINDEX=1) carry a robots noindex meta; live builds
+// carry none. tools/check-dist.mjs asserts both directions.
+function robotsMeta(): Plugin {
+  return {
+    name: 'origo-robots-meta',
+    transformIndexHtml() {
+      if (process.env.VITE_NOINDEX !== '1') return []
+      return [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' }, injectTo: 'head' }]
+    },
+  }
+}
+
 // Dev-only endpoint backing the in-app feedback tools (src/devfeedback). It
 // writes each submitted batch to feedback/incoming/<name>.md in the repo so
 // Claude can read it next session. Exists only in `vite dev`, never in a build.
@@ -97,5 +114,5 @@ function contentEditEndpoint(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   base,
-  plugins: [feedbackInbox(), contentEditEndpoint(), react()],
+  plugins: [feedbackInbox(), contentEditEndpoint(), robotsMeta(), react()],
 })

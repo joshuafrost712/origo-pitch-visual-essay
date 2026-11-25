@@ -1,0 +1,21 @@
+# origohub.org/preview/ (Origo site W-00, target "preview"). Written into dist/ by deploy/prepare.sh,
+# which replaces the path placeholder below with the BH_HTPASSWD_PATH secret.
+# Every push to site-v2 lands here, behind the password and noindex.
+
+DirectoryIndex index.html
+Options -Indexes
+
+AuthType Basic
+AuthName "Origo preview"
+AuthUserFile __HTPASSWD_PATH__
+Require valid-user
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+  <FilesMatch "\.(js|css|jpg|jpeg|png|webp|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

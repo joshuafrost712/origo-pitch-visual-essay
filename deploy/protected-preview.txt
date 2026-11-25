@@ -1,0 +1,1 @@
+# Paths under public/preview/ that something other than the deploy writes (anchored to the preview folder).

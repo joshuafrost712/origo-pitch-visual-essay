@@ -1,0 +1,17 @@
+# origohub.org public root (Origo site W-00, target "live"). Written into dist/ by deploy/prepare.sh.
+# Plain static files: no PHP, no WordPress, no server-side routing (the page uses #hash links).
+# No password and no noindex here, by Joshua's decision W-00/5; tools/check-dist.mjs refuses either.
+
+DirectoryIndex index.html
+Options -Indexes
+
+<IfModule mod_headers.c>
+  # Files in /assets/ carry a content hash in their names, so they can be cached for a year.
+  <FilesMatch "\.(js|css|jpg|jpeg|png|webp|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # The page itself must always be re-checked, so a new deploy shows at once.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

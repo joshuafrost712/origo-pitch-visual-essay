@@ -1,0 +1,2 @@
+protected path in upload plan: preview/index.html
+protected path in upload plan: preview/app.js

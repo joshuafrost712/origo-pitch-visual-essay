@@ -1,0 +1,103 @@
+# Deploys origohub.org (Origo site spec W-00, amended 2026-11-25).
+#   push to site-v2 -> https://origohub.org/preview/ behind the password and noindex
+#   push to live    -> https://origohub.org/ (public; only commits already on site-v2)
+# The old deploy.yml still deploys main to GitHub Pages and is not touched here.
+# This repo is public, so its Actions logs are public: never `rsync -v`, never `set -x`.
+name: Deploy origohub.org
+
+on:
+  push:
+    branches: [site-v2, live]
+
+permissions:
+  contents: read
+
+# One group per branch: a newer push supersedes only a pending run of the same target, and a
+# site-v2 push can never cancel a pending live deploy (W-00 amendment review, round 1).
+concurrency:
+  group: origohub-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: origohub
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve target
+        run: bash deploy/target.sh "${GITHUB_REF_NAME}" >> "$GITHUB_ENV"
+
+      - name: Live takes only commits already on site-v2
+        if: env.TARGET == 'live'
+        run: |
+          git fetch --no-tags origin site-v2
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/site-v2; then
+            echo "live tip not on site-v2"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_SIGNUP_URL: ${{ vars.VITE_SIGNUP_URL }}
+          VITE_COMMIT: ${{ github.sha }}
+
+      - name: Write .htaccess
+        run: bash deploy/prepare.sh dist "$TARGET"
+        env:
+          BH_HTPASSWD_PATH: ${{ secrets.BH_HTPASSWD_PATH }}
+
+      - name: Dist check
+        run: node tools/check-dist.mjs dist --target "$TARGET"
+
+      - name: SSH setup
+        run: |
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "$BH_SSH_KEY" > ~/.ssh/origohub
+          printf '%s\n' "$BH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          echo "RSH=ssh -i $HOME/.ssh/origohub -p $BH_PORT -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" >> "$GITHUB_ENV"
+          echo "REMOTE=$BH_USER@$BH_HOST" >> "$GITHUB_ENV"
+        env:
+          BH_SSH_KEY: ${{ secrets.BH_SSH_KEY }}
+          BH_KNOWN_HOSTS: ${{ secrets.BH_KNOWN_HOSTS }}
+          BH_PORT: ${{ secrets.BH_PORT }}
+          BH_USER: ${{ secrets.BH_USER }}
+          BH_HOST: ${{ secrets.BH_HOST }}
+
+      - name: Delete guard (dry run against the manifest)
+        run: |
+          mkdir -p .deploy-state
+          filters=()
+          while IFS= read -r p; do
+            case "$p" in ''|'#'*) continue ;; esac
+            filters+=("--filter=P $p")
+          done < "$PROTECTED"
+          printf '%s\n' "${filters[@]}" > .deploy-state/filters.txt
+          rsync -e "$RSH" -q "$REMOTE:$REMOTE_MANIFEST" .deploy-state/manifest.txt 2>/dev/null || true
+          rsync -e "$RSH" -q "$REMOTE:${TARGET_DIR}.htaccess" .deploy-state/live.htaccess 2>/dev/null || true
+          rsync -e "$RSH" -az --delete --dry-run --itemize-changes "${filters[@]}" dist/ "$REMOTE:$TARGET_DIR" > .deploy-state/plan.txt
+          node tools/check-delete-plan.mjs check --plan .deploy-state/plan.txt \
+            --manifest .deploy-state/manifest.txt --protected "$PROTECTED" --htaccess .deploy-state/live.htaccess
+
+      - name: Upload
+        run: |
+          mapfile -t filters < .deploy-state/filters.txt
+          rsync -e "$RSH" -az --delete "${filters[@]}" dist/ "$REMOTE:$TARGET_DIR"
+          node tools/check-delete-plan.mjs manifest dist --protected "$PROTECTED" > .deploy-state/new-manifest.txt
+          rsync -e "$RSH" -q .deploy-state/new-manifest.txt "$REMOTE:$REMOTE_MANIFEST"
+
+      - name: Smoke test
+        run: bash deploy/smoke.sh
+        env:
+          SITE_BASIC_AUTH: ${{ secrets.SITE_BASIC_AUTH }}
