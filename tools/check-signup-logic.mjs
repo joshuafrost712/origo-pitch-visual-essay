@@ -90,7 +90,7 @@ eq('  confirmation subject', mails[0].subject, "You're on the Origo list")
 eq('  notification subject', mails[1].subject, 'Origo sign-up: updates + beta')
 
 const before = mails.length
-eq('duplicate, different case + boxes', post({ email: 'a@example.COM', updates: false, beta: true }), { ok: true, status: 'updated' })
+eq('duplicate answers like a new sign-up (no membership oracle)', post({ email: 'a@example.COM', updates: false, beta: true }), { ok: true, status: 'added' })
 eq('  still one data row', sh().rows.length, 2)
 eq('  flags changed', sh().rows[1].slice(3, 5), [false, true])
 eq('  blank works_on preserved', sh().rows[1][5], 'Tonal langs')
@@ -120,11 +120,25 @@ eq('  name capped at 120', sh().rows[sh().rows.length - 1][2].length, 120)
 
 // JSONP
 const jp = ctx.doGet({ parameter: { callback: 'test', email: 'a@example.com', updates: '1', beta: '0' } })
-eq('JSONP wrapper', jp.t, 'test({"ok":true,"status":"updated"});')
+eq('JSONP wrapper', jp.t, 'test({"ok":true,"status":"added"});')
 eq('JSONP mime', jp.mime, 'js')
 eq('JSONP string truthiness', sh().rows[1].slice(3, 5), [true, false])
 eq('hostile callback refused', JSON.parse(ctx.doGet({ parameter: { callback: 'alert(1)//', email: 'a@example.com', updates: '1' } }).t), { ok: false, error: 'bad-callback' })
-eq('GET without callback returns JSON', JSON.parse(ctx.doGet({ parameter: { email: 'a@example.com', updates: 'yes' } }).t), { ok: true, status: 'updated' })
+eq('GET without callback returns JSON', JSON.parse(ctx.doGet({ parameter: { email: 'a@example.com', updates: 'yes' } }).t), { ok: true, status: 'added' })
+
+// Spreadsheet formula injection (SEC-01): every stored text value that Sheets would read as a
+// formula gets a leading apostrophe; ordinary values are stored unchanged.
+const last = () => sh().rows[sh().rows.length - 1]
+post({ email: '=IMAGE("https://x.example/y@z.zz")', name: '=HYPERLINK("https://x.example")', updates: true, beta: true, works_on: '+1+cmd', source: '@SUM(A1)' })
+eq('formula in email, name, works_on, source escaped', last().slice(1, 7), ["'=IMAGE(\"https://x.example/y@z.zz\")", "'=HYPERLINK(\"https://x.example\")", true, true, "'+1+cmd", "'@SUM(A1)"])
+post({ email: 'dash@example.com', name: '-1', updates: true })
+eq('  leading minus escaped', last()[2], "'-1")
+post({ email: 'plain@example.com', name: 'Ada = Lovelace', updates: true, beta: true, works_on: 'Greek; 2+2' })
+eq('  an = or + inside a value is left alone', [last()[2], last()[5]], ['Ada = Lovelace', 'Greek; 2+2'])
+const rowsBeforeDup = sh().rows.length
+post({ email: '=IMAGE("https://x.example/y@z.zz")', updates: true, works_on: '=1' })
+eq('  an escaped address still dedupes', sh().rows.length, rowsBeforeDup)
+eq('  update path escapes works_on', sh().rows.find((r) => r[1] === "'=IMAGE(\"https://x.example/y@z.zz\")")[5], "'=1")
 
 // Daily ceiling
 props.DAILY_COUNT = '2026-08-05|200'

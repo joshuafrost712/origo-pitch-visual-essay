@@ -1,0 +1,12 @@
+diff --git a/deploy/htaccess-live.template b/deploy/htaccess-live.template
+index b27f0b9..c884104 100644
+--- a/deploy/htaccess-live.template
++++ b/deploy/htaccess-live.template
+@@ -23,7 +23,6 @@ Options -Indexes
+ # A change that adds a remote font, script, image or form endpoint must widen this line, and
+ # tools/check-csp.mjs (headless Chromium against a local Apache) shows what it blocks.
+ <IfModule mod_headers.c>
+-  Header always set Content-Security-Policy "default-src 'none'; script-src 'self' https://script.google.com https://script.googleusercontent.com; connect-src https://script.google.com https://script.googleusercontent.com; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+   Header always set X-Content-Type-Options "nosniff"
+   Header always set X-Frame-Options "DENY"
+   Header always set Referrer-Policy "strict-origin-when-cross-origin"

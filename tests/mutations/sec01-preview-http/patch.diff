@@ -1,0 +1,12 @@
+diff --git a/deploy/htaccess-preview.template b/deploy/htaccess-preview.template
+index 4971b6a..ef5c12b 100644
+--- a/deploy/htaccess-preview.template
++++ b/deploy/htaccess-preview.template
+@@ -35,7 +35,3 @@ Require valid-user
+ # block replaces the Require above with a refusal, so no password prompt is ever sent, and the
+ # 403 is answered with a redirect to the HTTPS address. The X-Forwarded-Proto test keeps this
+ # working if a proxy that talks plain HTTP to Apache is ever put back in front.
+-<If "%{HTTPS} != 'on' && %{HTTP:X-Forwarded-Proto} != 'https'">
+-  Require all denied
+-  ErrorDocument 403 https://origohub.org/preview/
+-</If>

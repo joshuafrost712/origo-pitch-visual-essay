@@ -51,6 +51,23 @@ const authType = htHas(/^AuthType\s+Basic\b/i)
 const requireUser = htHas(/^Require\s+valid-user\b/i)
 const authFile = htHas(/^AuthUserFile\s+\S+/i)
 
+// SEC-01: both targets send the security headers, and the preview never asks for its password over
+// plain HTTP. Checked here so a later edit to a template cannot drop them without failing the deploy.
+const securityHeaders = [
+  /^Header\s+always\s+set\s+Content-Security-Policy\s+".*default-src 'none'.*frame-ancestors 'none'/i,
+  /^Header\s+always\s+set\s+X-Content-Type-Options\s+"nosniff"/i,
+  /^Header\s+always\s+set\s+Referrer-Policy\s+/i,
+  /^Header\s+always\s+set\s+X-Frame-Options\s+"DENY"/i,
+  /^Header\s+always\s+set\s+Permissions-Policy\s+/i,
+]
+if (!securityHeaders.every((re) => htHas(re))) failures.push('security headers missing')
+if (target === 'preview' && !(htHas(/^<If\s+"%\{HTTPS\} != 'on'/i) && htHas(/^Require\s+all\s+denied\b/i))) {
+  failures.push('preview password allowed over http')
+}
+if (target === 'live' && !(htHas(/^RewriteCond\s+%\{HTTPS\}\s+!=on/i) && htHas(/^RewriteRule\s+\^\s+https:\/\//i))) {
+  failures.push('live https redirect missing')
+}
+
 if (target === 'preview') {
   if (!robotsNoindex || !headerNoindex) failures.push('noindex missing')
   if (!(authType && requireUser && authFile)) failures.push('password block missing')
