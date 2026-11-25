@@ -71,7 +71,7 @@ jobs:
         env:
           BH_SSH_KEY: ${{ secrets.BH_SSH_KEY }}
           BH_KNOWN_HOSTS: ${{ secrets.BH_KNOWN_HOSTS }}
-          BH_PORT: ${{ secrets.BH_PORT }}
+          BH_PORT: ${{ vars.BH_PORT }}  # a variable, not a secret: a secret "22" masks every "22" in a sha in the public log
           BH_USER: ${{ secrets.BH_USER }}
           BH_HOST: ${{ secrets.BH_HOST }}
 
