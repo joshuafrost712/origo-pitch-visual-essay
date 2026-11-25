@@ -4,6 +4,7 @@
 # sha is this run's commit and the anonymous status is the target's expected one (preview 401,
 # live 200). Needs TARGET, SITE_URL, EXPECT_ANON (from deploy/target.sh) and GITHUB_SHA;
 # the preview also needs SITE_BASIC_AUTH (user:password). Never echoes the credentials.
+# Keep non-secret values (the port) out of GitHub secrets: the log masks a secret's value everywhere, even inside this line's sha.
 set -uo pipefail
 : "${TARGET:?}" "${SITE_URL:?}" "${EXPECT_ANON:?}" "${GITHUB_SHA:?}"
 live=none; anon=000
