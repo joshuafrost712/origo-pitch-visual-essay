@@ -88,6 +88,18 @@ function clip_(v, max) {
   return String(v == null ? '' : v).trim().slice(0, max)
 }
 
+/**
+ * Spreadsheet formula injection (SEC-01, 2026-11-25). Sheets reads a written string that starts with
+ * =, +, - or @ as a formula, so a submitted value like =IMAGE("https://…") would run when the Sheet
+ * is opened. A leading apostrophe makes Sheets store the text as typed; the apostrophe itself is not
+ * part of the cell's value. Tab and carriage return are on the list for CSV exports opened elsewhere.
+ * Every free-text value the script writes goes through this, the email too: validEmail_ accepts
+ * =IMAGE("https://x/y@z.zz"), because it has one @ and a dot after it.
+ */
+function plain_(v) {
+  return /^[=+\-@\t\r]/.test(v) ? "'" + v : v
+}
+
 function validEmail_(email) {
   return email.length > 0 && email.length <= MAX_EMAIL && /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]{2,}$/.test(email)
 }
@@ -158,15 +170,15 @@ function handle_(data) {
 
     if (isNew) {
       // appendRow writes columns 1-7 of a fresh row; 8-10 stay empty.
-      sh.appendRow([new Date(), email, name, updates, beta, worksOn, source])
+      sh.appendRow([new Date(), plain_(email), plain_(name), updates, beta, plain_(worksOn), plain_(source)])
       row = sh.getLastRow()
     } else {
       sh.getRange(row, COL.updates, 1, 2).setValues([[updates, beta]])
       // Only overwrite the note if this submission carried one, so a returning
       // signer who leaves it blank does not erase what they told us before.
-      if (worksOn) sh.getRange(row, COL.worksOn).setValue(worksOn)
+      if (worksOn) sh.getRange(row, COL.worksOn).setValue(plain_(worksOn))
       if (name && !clip_(sh.getRange(row, COL.name).getValue(), MAX_NAME)) {
-        sh.getRange(row, COL.name).setValue(name)
+        sh.getRange(row, COL.name).setValue(plain_(name))
       }
     }
     bumpDailyCount_()
@@ -182,7 +194,11 @@ function handle_(data) {
     sendNotification_(email, name, updates, beta, worksOn, source)
   }
 
-  return { ok: true, status: isNew ? 'added' : 'updated' }
+  // The same answer for a new and a returning address (SEC-01). A distinct "updated" told any caller
+  // whether a given address was already on the list, and this list can hold people whose interest in
+  // a Bible-translation tool is not safe to reveal. The client still understands "updated", so an
+  // older deployment and this one both work with the same site.
+  return { ok: true, status: 'added' }
 }
 
 /** Case-insensitive lookup in column B. Returns the row number, or 0. */
@@ -192,7 +208,8 @@ function findRow_(sh, email) {
   var values = sh.getRange(2, COL.email, last - 1, 1).getValues()
   var needle = email.toLowerCase()
   for (var i = 0; i < values.length; i++) {
-    if (String(values[i][0]).trim().toLowerCase() === needle) return i + 2
+    // A leading apostrophe is plain_()'s escape; Sheets hides it, the local test stub does not.
+    if (String(values[i][0]).trim().replace(/^'/, '').toLowerCase() === needle) return i + 2
   }
   return 0
 }

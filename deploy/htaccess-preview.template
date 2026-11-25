@@ -19,3 +19,23 @@ Require valid-user
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
+
+# Security headers (SEC-01, 2026-11-25): the same set as the live root; see htaccess-live.template.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'none'; script-src 'self' https://script.google.com https://script.googleusercontent.com; connect-src https://script.google.com https://script.googleusercontent.com; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+</IfModule>
+
+# The password never crosses plain HTTP (SEC-01). Authorization runs before any rewrite, so a
+# redirect alone would still ask for the password over HTTP first. On a plain-HTTP request this
+# block replaces the Require above with a refusal, so no password prompt is ever sent, and the
+# 403 is answered with a redirect to the HTTPS address. The X-Forwarded-Proto test keeps this
+# working if a proxy that talks plain HTTP to Apache is ever put back in front.
+<If "%{HTTPS} != 'on' && %{HTTP:X-Forwarded-Proto} != 'https'">
+  Require all denied
+  ErrorDocument 403 https://origohub.org/preview/
+</If>

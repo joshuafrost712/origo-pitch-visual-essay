@@ -15,3 +15,30 @@ Options -Indexes
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
+
+# Security headers (SEC-01, 2026-11-25). "always" so 403, 404 and redirect responses carry them too.
+# The CSP allows only this site's own files plus the sign-up endpoint: the form POSTs to
+# script.google.com, which redirects to script.googleusercontent.com, and its JSONP fallback loads
+# a script from the same two hosts. img-src data: is the inline SVG favicon in index.html.
+# A change that adds a remote font, script, image or form endpoint must widen this line, and
+# tools/check-csp.mjs (headless Chromium against a local Apache) shows what it blocks.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'none'; script-src 'self' https://script.google.com https://script.googleusercontent.com; connect-src https://script.google.com https://script.googleusercontent.com; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+</IfModule>
+
+# HTTPS only (SEC-01). Apache terminates TLS itself here (no proxy in front, measured 2026-11-25).
+# The X-Forwarded-Proto test stops a loop if a proxy that talks plain HTTP to Apache (Cloudflare
+# "Flexible") is ever put back in front. /.well-known/ stays reachable over HTTP for certificate checks.
+# No HSTS yet: see SEC-01's report for when to add it.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
