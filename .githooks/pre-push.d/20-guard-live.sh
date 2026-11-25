@@ -24,7 +24,9 @@ while read -r local_ref local_sha remote_ref remote_sha; do
   approvals="${ORIGO_SITE_LIVE_APPROVALS:-}"
   approved=no
   if [ -n "$approvals" ] && [ -f "$approvals" ]; then
-    while IFS='|' read -r c_sha _c_date _c_review c_verdict; do
+    # `|| [ -n ... ]` also reads an unterminated last line, so a final NO-GO with no newline
+    # still revokes (shadow review, 2026-11-25).
+    while IFS='|' read -r c_sha _c_date _c_review c_verdict || [ -n "${c_sha:-}" ]; do
       c_sha="$(printf '%s' "$c_sha" | sed -E 's/^[[:space:]]*-?[[:space:]]*//; s/[[:space:]]+$//')"
       c_verdict="$(printf '%s' "${c_verdict:-}" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//')"
       [ "$c_sha" = "$local_sha" ] || continue

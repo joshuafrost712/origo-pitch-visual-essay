@@ -35,6 +35,9 @@ for (const line of input.split('\n')) {
   let commits = []
   try { commits = git('rev-list', ...range).split('\n').filter(Boolean) } catch { commits = git('rev-list', localSha).split('\n').filter(Boolean) }
   for (const c of commits) {
+    // File names come from diff-tree too, so an empty or binary file (no "+++" line) is still named.
+    for (const f of git('diff-tree', '--no-commit-id', '--name-only', '-r', '--diff-filter=AR', '--root', c).split('\n').filter(Boolean))
+      for (const b of badName) if (b.re.test(f)) hits.push(`secret pattern: ${b.name} in ${f}`)
     const diff = git('show', '--format=', '--unified=0', '--no-color', '--no-renames', c)
     let path = '?'
     for (const d of diff.split('\n')) {

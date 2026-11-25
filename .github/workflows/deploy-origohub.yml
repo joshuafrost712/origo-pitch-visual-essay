@@ -87,8 +87,11 @@ jobs:
           # array would write one blank line, which mapfile reads back as an empty rsync argument.
           : > .deploy-state/filters.txt
           for f in "${filters[@]}"; do printf '%s\n' "$f" >> .deploy-state/filters.txt; done
-          rsync -e "$RSH" -q "$REMOTE:$REMOTE_MANIFEST" .deploy-state/manifest.txt 2>/dev/null || true
-          rsync -e "$RSH" -q "$REMOTE:${TARGET_DIR}.htaccess" .deploy-state/live.htaccess 2>/dev/null || true
+          # A file absent on the server makes rsync exit 23 (measured through the fenced key);
+          # only that means "absent". Any other failure stops the deploy rather than reading as absent.
+          pull() { local rc=0; rsync -e "$RSH" -q "$REMOTE:$1" "$2" 2>/dev/null || rc=$?; if [ "$rc" -ne 0 ] && [ "$rc" -ne 23 ]; then echo "pull failed (rsync exit $rc): $1"; exit 1; fi; }
+          pull "$REMOTE_MANIFEST" .deploy-state/manifest.txt
+          pull "${TARGET_DIR}.htaccess" .deploy-state/live.htaccess
           rsync -e "$RSH" -az --delete --dry-run --itemize-changes "${filters[@]}" dist/ "$REMOTE:$TARGET_DIR" > .deploy-state/plan.txt
           node tools/check-delete-plan.mjs check --plan .deploy-state/plan.txt \
             --manifest .deploy-state/manifest.txt --protected "$PROTECTED" --htaccess .deploy-state/live.htaccess
