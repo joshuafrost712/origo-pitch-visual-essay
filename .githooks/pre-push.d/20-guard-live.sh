@@ -27,9 +27,10 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     while IFS='|' read -r c_sha _c_date _c_review c_verdict; do
       c_sha="$(printf '%s' "$c_sha" | sed -E 's/^[[:space:]]*-?[[:space:]]*//; s/[[:space:]]+$//')"
       c_verdict="$(printf '%s' "${c_verdict:-}" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//')"
-      if [ "$c_sha" = "$local_sha" ] && { [ "$c_verdict" = "GO" ] || [ "$c_verdict" = "GO after fixes" ]; }; then
-        approved=yes
-      fi
+      [ "$c_sha" = "$local_sha" ] || continue
+      # The last line for a sha wins: every matching line resets the verdict, so a later
+      # NO-GO revokes an earlier GO (mutation w00-live-revoked).
+      if [ "$c_verdict" = "GO" ] || [ "$c_verdict" = "GO after fixes" ]; then approved=yes; else approved=no; fi
     done < "$approvals"
   fi
   if [ "$approved" != yes ]; then
