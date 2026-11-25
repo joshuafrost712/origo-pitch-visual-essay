@@ -59,7 +59,11 @@ await new Promise((r) => stub.listen(0, '127.0.0.1', r))
 const port = stub.address().port
 
 const browser = await chromium.launch({
-  args: [`--host-resolver-rules=MAP script.google.com 127.0.0.1:${port}, MAP script.googleusercontent.com 127.0.0.1:${port}`],
+  args: [
+    `--host-resolver-rules=MAP script.google.com 127.0.0.1:${port}, MAP script.googleusercontent.com 127.0.0.1:${port}`,
+    // A public page (the real preview) may not call 127.0.0.1 by default; this test needs it to.
+    '--disable-features=LocalNetworkAccessChecks,PrivateNetworkAccessSendPreflights,PrivateNetworkAccessRespectPreflightResults,BlockInsecurePrivateNetworkRequests',
+  ],
 })
 const context = await browser.newContext({
   ignoreHTTPSErrors: true,
@@ -95,10 +99,20 @@ for (const tab of TABS) {
   await page.waitForLoadState('networkidle')
 }
 
+// Fail closed: the form is submitted only after a probe from the page has reached the stub, so a
+// mapping that did not take can never send a test sign-up to the live endpoint.
+async function stubReachable() {
+  const before = seen.length
+  await page.evaluate(() => fetch('https://script.google.com/__stub_probe', { mode: 'no-cors' }).catch(() => {}))
+  await page.waitForTimeout(300)
+  return seen.slice(before).some((r) => r.endsWith('script.google.com'))
+}
+
 async function signup(m) {
   mode = m
   await page.goto(`${url}#/together`, { waitUntil: 'networkidle' })
   await page.reload({ waitUntil: 'networkidle' })
+  if (!(await stubReachable())) return note(`${m}: the stub endpoint is not reachable from the page; form not submitted`)
   const form = page.locator('form.su-form')
   if ((await form.count()) === 0) return note(`${m}: no sign-up form rendered (is VITE_SIGNUP_URL set for the build?)`)
   await form.locator('input[name=email]').fill('csp-check@example.invalid')
