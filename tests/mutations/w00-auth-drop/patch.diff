@@ -1,0 +1,12 @@
+diff --git a/deploy/htaccess-preview.template b/deploy/htaccess-preview.template
+index b5a2f3e..e9663cf 100644
+--- a/deploy/htaccess-preview.template
++++ b/deploy/htaccess-preview.template
+@@ -5,7 +5,6 @@
+ DirectoryIndex index.html
+ Options -Indexes
+ 
+-AuthType Basic
+ AuthName "Origo preview"
+ AuthUserFile __HTPASSWD_PATH__
+ Require valid-user

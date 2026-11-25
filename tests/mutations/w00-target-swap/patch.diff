@@ -1,0 +1,22 @@
+diff --git a/deploy/target.sh b/deploy/target.sh
+index 9a25ddd..13daab8 100755
+--- a/deploy/target.sh
++++ b/deploy/target.sh
+@@ -6,7 +6,7 @@
+ set -euo pipefail
+ webroot="${BH_WEBROOT:-public}"
+ case "${1:-}" in
+-  site-v2)
++  live)
+     cat <<EOT
+ TARGET=preview
+ TARGET_DIR=${webroot}/preview/
+@@ -18,7 +18,7 @@ PROTECTED=deploy/protected-preview.txt
+ EXPECT_ANON=401
+ EOT
+     ;;
+-  live)
++  site-v2)
+     cat <<EOT
+ TARGET=live
+ TARGET_DIR=${webroot}/

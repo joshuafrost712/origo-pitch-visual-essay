@@ -1,0 +1,12 @@
+diff --git a/deploy/htaccess-live.template b/deploy/htaccess-live.template
+index 58c8a30..8aa8b3c 100644
+--- a/deploy/htaccess-live.template
++++ b/deploy/htaccess-live.template
+@@ -4,6 +4,7 @@
+ 
+ DirectoryIndex index.html
+ Options -Indexes
++AuthType Basic
+ 
+ <IfModule mod_headers.c>
+   # Files in /assets/ carry a content hash in their names, so they can be cached for a year.

@@ -1,0 +1,12 @@
+diff --git a/deploy/htaccess-preview.template b/deploy/htaccess-preview.template
+index b5a2f3e..55e6d36 100644
+--- a/deploy/htaccess-preview.template
++++ b/deploy/htaccess-preview.template
+@@ -11,7 +11,6 @@ AuthUserFile __HTPASSWD_PATH__
+ Require valid-user
+ 
+ <IfModule mod_headers.c>
+-  Header always set X-Robots-Tag "noindex, nofollow"
+   <FilesMatch "\.(js|css|jpg|jpeg|png|webp|svg|woff2?)$">
+     Header set Cache-Control "public, max-age=31536000, immutable"
+   </FilesMatch>
